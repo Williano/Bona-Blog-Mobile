@@ -25,9 +25,9 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
   
   
 ## Technologies
-* Swift 4
-* iOS 12 SDK
-* Kingfisher
+* Dart
+* Flutter
+* 
 
 ## Setup
 To clone and run this application, you'll need a MacBook, Xcode 10.1 and Git installed on your Mac. From your command line:
