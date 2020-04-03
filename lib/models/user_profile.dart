@@ -1,3 +1,5 @@
+import 'package:flutter/foundation.dart';
+
 class UserProfile {
   String username;
   String firstName;
