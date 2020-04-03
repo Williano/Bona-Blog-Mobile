@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class UserProfile {
   String username;
   String firstName;
@@ -43,4 +41,7 @@ class UserProfile {
         assert(userGroup != null),
         assert(userProfileImageURL != null),
         assert(userProfileBannerImageURL != null);
+
+  @override
+  String toString() => "$username";
 }
