@@ -1,3 +1,4 @@
+import 'package:bona_blog/utilities/custom_material_color.dart';
 import 'package:bona_blog/utilities/route_constants.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,7 @@ class UndefinedScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, FeedScreenRoute);
                   },
-                  color: Colors.blue,
+                  color: customColor,
                   icon: Icon(
                     Icons.home,
                     color: Colors.white,

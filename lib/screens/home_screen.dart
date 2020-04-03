@@ -1,4 +1,5 @@
 import 'package:bona_blog/screens/feed_screen.dart';
+import 'package:bona_blog/screens/undefined_screen.dart';
 import 'package:bona_blog/utilities/custom_material_color.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> screens = [
     FeedScreen(key: PageStorageKey("Feed Screen")),
-    FeedScreen(key: PageStorageKey("Feed Screen")),
+    UndefinedScreen(key: PageStorageKey("Undefined Screen")),
     FeedScreen(key: PageStorageKey("Feed Screen")),
     FeedScreen(key: PageStorageKey("Feed Screen")),
     FeedScreen(key: PageStorageKey("Feed Screen")),
