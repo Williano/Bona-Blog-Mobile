@@ -1,3 +1,4 @@
+import 'package:bona_blog/screens/feed_screen.dart';
 import 'package:bona_blog/screens/home_screen.dart';
 import 'package:bona_blog/screens/undefined_screen.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,10 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
     case HomeScreenRoute:
       return MaterialPageRoute(builder: (BuildContext context) => HomeScreen());
+      break;
+
+    case FeedScreenRoute:
+      return MaterialPageRoute(builder: (BuildContext context) => FeedScreen());
       break;
 
     default:

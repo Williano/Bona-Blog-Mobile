@@ -24,7 +24,7 @@ class UndefinedScreen extends StatelessWidget {
             Center(
               child: FlatButton.icon(
                   onPressed: () {
-                    Navigator.pushReplacementNamed(context, HomeScreenRoute);
+                    Navigator.pushReplacementNamed(context, FeedScreenRoute);
                   },
                   color: Colors.blue,
                   icon: Icon(
