@@ -1,5 +1,6 @@
 import 'package:bona_blog/routes/router.dart';
 import 'package:bona_blog/screens/home_screen.dart';
+import 'package:bona_blog/utilities/custom_material_color.dart';
 import 'package:bona_blog/utilities/route_constants.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class BonaBlog extends StatelessWidget {
       initialRoute: HomeScreenRoute,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: customColor,
       ),
       home: HomeScreen(),
     );

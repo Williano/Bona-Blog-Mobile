@@ -1,8 +1,9 @@
 import 'package:bona_blog/screens/feed_screen.dart';
+import 'package:bona_blog/utilities/custom_material_color.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({Key key});
+  HomeScreen({Key key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -43,6 +44,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _appBottomNavigationBar() => BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        backgroundColor: customColor,
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.white,
         currentIndex: _currentTabIndex,
         items: _bottomNavigationBarItems,
         onTap: (int index) {
