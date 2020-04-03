@@ -1,12 +1,12 @@
 import 'package:flutter/cupertino.dart';
 
 class Category {
-  final String name;
-  final String imageURL;
-  final String dateCreatedOn;
-  final String dateUpdatedOn;
-  final String timeCreatedOn;
-  final String timeUpdatedOn;
+  String name;
+  String imageURL;
+  String dateCreatedOn;
+  String dateUpdatedOn;
+  String timeCreatedOn;
+  String timeUpdatedOn;
 
   Category(
       {@required this.name,
