@@ -1,4 +1,5 @@
 import 'package:bona_blog/models/category_model.dart';
+import 'package:bona_blog/widgets/custom_sliver_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class CategoryListScreen extends StatefulWidget {
@@ -19,40 +20,35 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
-        appBar: AppBar(
-          elevation: 0,
-          title: Text(
-            "Categories",
-            style:
-                TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
-          ),
-          centerTitle: true,
-        ),
-        body: Container(
-          padding: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
-          child: _categoryGrid(),
-        ));
-  }
-
-  Widget _categoryGrid() {
-    return GridView.builder(
+      backgroundColor: Theme.of(context).backgroundColor,
+      body: CustomScrollView(
         physics: BouncingScrollPhysics(),
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        itemCount: _categories.length,
-        itemBuilder: (BuildContext context, int categoryIndex) {
-          return GestureDetector(
-            onTap: () {
-              print("Hello");
-            },
-            child: _categoryCard(categoryIndex),
-          );
-        });
+        slivers: <Widget>[
+          customSliverAppBar(
+              context: context,
+              title: "Category",
+              assetImage: "assets/images/food.jpg"),
+          _categoriesSliverGrid()
+        ],
+      ),
+    );
   }
 
-  Widget _categoryCard(int categoryIndex) {
+  Widget _categoriesSliverGrid() => SliverGrid(
+      delegate:
+          SliverChildBuilderDelegate((BuildContext context, int categoryIndex) {
+        return GestureDetector(
+            onTap: () {
+              print("${_categories[categoryIndex].name}");
+            },
+            child: _categoryCard(context, categoryIndex));
+      }, childCount: _categories.length),
+      gridDelegate:
+          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2));
+
+  Widget _categoryCard(BuildContext context, int categoryIndex) {
     return Card(
+      // margin: EdgeInsets.fromLTRB(6.0, 6.0, 6.0, 0.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
       elevation: 0,
       child: Stack(
