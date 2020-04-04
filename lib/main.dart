@@ -15,6 +15,8 @@ class BonaBlog extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: customColor,
+        primaryColorLight: Colors.white,
+        primaryColorDark: Colors.black,
       ),
       home: HomeScreen(),
     );

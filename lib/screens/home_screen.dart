@@ -1,3 +1,4 @@
+import 'package:bona_blog/screens/category_list_screen.dart';
 import 'package:bona_blog/screens/feed_screen.dart';
 import 'package:bona_blog/screens/undefined_screen.dart';
 import 'package:bona_blog/utilities/custom_material_color.dart';
@@ -16,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final PageStorageBucket bucket = PageStorageBucket();
 
   List<Widget> screens = [
-    FeedScreen(key: PageStorageKey("Feed Screen")),
+    CategoryListScreen(key: PageStorageKey("Category Screen")),
     UndefinedScreen(key: PageStorageKey("Undefined Screen")),
     FeedScreen(key: PageStorageKey("Feed Screen")),
     FeedScreen(key: PageStorageKey("Feed Screen")),
@@ -46,8 +47,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _appBottomNavigationBar() => BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: customColor,
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.white,
+        selectedItemColor: Theme.of(context).primaryColorDark,
+        unselectedItemColor: Theme.of(context).primaryColorLight,
         currentIndex: _currentTabIndex,
         items: _bottomNavigationBarItems,
         onTap: (int index) {

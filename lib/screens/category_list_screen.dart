@@ -9,6 +9,15 @@ class CategoryListScreen extends StatefulWidget {
 class _CategoryListScreenState extends State<CategoryListScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            "Categories",
+            style:
+                TextStyle(color: Colors.black87, fontWeight: FontWeight.bold),
+          ),
+          centerTitle: true,
+        ),
+        body: Container());
   }
 }
