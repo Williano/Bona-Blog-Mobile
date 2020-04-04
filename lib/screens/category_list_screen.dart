@@ -26,7 +26,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
         slivers: <Widget>[
           customSliverAppBar(
               context: context,
-              title: "Category",
+              title: "Categories",
               assetImage: "assets/images/food.jpg"),
           _categoriesSliverGrid()
         ],
