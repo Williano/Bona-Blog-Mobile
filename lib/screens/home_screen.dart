@@ -46,6 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget _appBottomNavigationBar() => BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
+        elevation: 0.0,
         backgroundColor: customColor,
         selectedItemColor: Theme.of(context).primaryColorDark,
         unselectedItemColor: Theme.of(context).primaryColorLight,
