@@ -47,6 +47,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2));
 
   Widget _categoryCard(BuildContext context, int categoryIndex) {
+    // Wrap Future Builder around it
     return Card(
       // margin: EdgeInsets.fromLTRB(6.0, 6.0, 6.0, 0.0),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
