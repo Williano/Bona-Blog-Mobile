@@ -10,6 +10,7 @@ class UndefinedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         elevation: 0,
         title: Text("$name Not Found"),
@@ -24,7 +25,10 @@ class UndefinedScreen extends StatelessWidget {
               style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
             )),
             Center(
-              child: FlatButton.icon(
+              child: RaisedButton.icon(
+                  elevation: 0.0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0)),
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, HomeScreenRoute);
                   },
@@ -34,7 +38,7 @@ class UndefinedScreen extends StatelessWidget {
                     color: Colors.white,
                   ),
                   label: Text(
-                    "Return Home",
+                    "Return To Feed",
                     style: TextStyle(color: Colors.white, fontSize: 18.0),
                   )),
             )
