@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0.0,
         backgroundColor: customColor,
         selectedItemColor: Theme.of(context).primaryColorDark,
-        unselectedItemColor: Theme.of(context).primaryColorLight,
+        unselectedItemColor: Theme.of(context).backgroundColor,
         currentIndex: _currentTabIndex,
         items: _bottomNavigationBarItems,
         onTap: (int index) {
