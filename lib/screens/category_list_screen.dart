@@ -8,10 +8,18 @@ class CategoryListScreen extends StatefulWidget {
 }
 
 class _CategoryListScreenState extends State<CategoryListScreen> {
-  List<Category> _categories = Category.getCategoryList();
+  List<Category> _categories;
+
+  @override
+  void initState() {
+    super.initState();
+    _categories = Category.getCategoryList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,,
         appBar: AppBar(
           elevation: 0,
           title: Text(
@@ -22,7 +30,6 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
           centerTitle: true,
         ),
         body: Container(
-          color: Theme.of(context).backgroundColor,
           padding: EdgeInsets.fromLTRB(5.0, 0.0, 5.0, 0.0),
           child: _categoryGrid(),
         ));
