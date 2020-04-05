@@ -1,5 +1,5 @@
 # Bona Mobile
-An iOS and Android Mobile App for the Open-Source Bona Blogging platform.
+An iOS and Android Mobile App for the [Open-Source Bona Blogging Web App](https://github.com/Williano/Bona-Blog/blob/master/README.md)
 
 ## Table of contents
 * [General info](#general-info)
@@ -77,7 +77,7 @@ To run this app, you will need to follow these 3 steps:
   ```
 
 ## Features
-* [Web App](https://github.com/Williano/Bona-Blog.git)
+* [Web App Version](https://github.com/Williano/Bona-Blog.git)
 * Authors List
 * Author Articles List
 * Category List
