@@ -1,5 +1,5 @@
 import 'package:bona_blog/models/category_model.dart';
-import 'package:bona_blog/widgets/custom_sliver_app_bar.dart';
+import 'package:bona_blog/widgets/custom_sliver_app_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 class CategoryListScreen extends StatefulWidget {
@@ -14,7 +14,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
   @override
   void initState() {
     super.initState();
-    _categories = Category.getCategoryList();
+    _categories = Category.getAllCategories();
   }
 
   @override
@@ -73,6 +73,8 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
             bottom: 20.0,
             child: Text(
               _categories[categoryIndex].name,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 color: Theme.of(context).primaryColorLight,
                 fontSize: 18.0,
