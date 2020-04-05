@@ -2,7 +2,9 @@ import 'package:bona_blog/screens/category_list_screen.dart';
 import 'package:bona_blog/screens/feed_screen.dart';
 import 'package:bona_blog/screens/undefined_screen.dart';
 import 'package:bona_blog/utilities/custom_material_color.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -25,12 +27,36 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<BottomNavigationBarItem> _bottomNavigationBarItems = [
-    BottomNavigationBarItem(icon: Icon(Icons.apps), title: Text("Categories")),
-    BottomNavigationBarItem(icon: Icon(Icons.people), title: Text("Authors")),
-    BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Feed")),
     BottomNavigationBarItem(
-        icon: Icon(Icons.dashboard), title: Text("Dashboard")),
-    BottomNavigationBarItem(icon: Icon(Icons.settings), title: Text("Settings"))
+        icon: FaIcon(
+          FontAwesomeIcons.gripVertical,
+          size: 25.0,
+        ),
+        title: Text("Categories")),
+    BottomNavigationBarItem(
+        icon: FaIcon(
+          FontAwesomeIcons.users,
+          size: 25.0,
+        ),
+        title: Text("Authors")),
+    BottomNavigationBarItem(
+        icon: FaIcon(
+          Icons.home,
+          size: 25.0,
+        ),
+        title: Text("Feed")),
+    BottomNavigationBarItem(
+        icon: FaIcon(
+          Icons.dashboard,
+          size: 25.0,
+        ),
+        title: Text("Dashboard")),
+    BottomNavigationBarItem(
+        icon: FaIcon(
+          FontAwesomeIcons.cog,
+          size: 26.0,
+        ),
+        title: Text("Settings"))
   ];
 
   @override
