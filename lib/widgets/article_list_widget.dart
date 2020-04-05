@@ -1,7 +1,8 @@
 import 'package:bona_blog/widgets/article_card_widget.dart';
 import 'package:flutter/material.dart';
 
-Widget articleListView({BuildContext context, List articles}) {
+Widget articleListView(
+    {@required BuildContext context, @required List articles}) {
   return ListView.builder(
       physics: BouncingScrollPhysics(),
       itemCount: articles.length,
