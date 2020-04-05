@@ -51,8 +51,7 @@ class Category {
           imageURL: "assets/images/food.jpg",
         ),
         Category(
-          name:
-              "Software Engineering Software Engineering Software Engineering",
+          name: "Software Engineering ",
           imageURL: "assets/images/se.jpg",
         ),
         Category(
