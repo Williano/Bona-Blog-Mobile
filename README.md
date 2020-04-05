@@ -1,5 +1,5 @@
 # Bona Mobile
-An Android and iOS Mobile App for the Open-Source Bona Blogging platform.
+An iOS and Android Mobile App for the Open-Source Bona Blogging platform.
 
 ## Table of contents
 * [General info](#general-info)
