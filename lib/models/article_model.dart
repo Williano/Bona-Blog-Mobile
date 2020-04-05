@@ -6,7 +6,6 @@ class Article {
   String category;
   String body;
   int numberOfViews;
-  int numberOfWords;
   int readTime;
   String dateCreatedOn;
   String dateUpdatedOn;
@@ -19,7 +18,6 @@ class Article {
       @required this.category,
       @required this.body,
       @required this.numberOfViews,
-      @required this.numberOfWords,
       @required this.readTime,
       @required this.dateCreatedOn,
       @required this.dateUpdatedOn,
@@ -30,7 +28,6 @@ class Article {
         assert(category != null),
         assert(body != null),
         assert(numberOfViews != null),
-        assert(numberOfWords != null),
         assert(readTime != null),
         assert(dateCreatedOn != null),
         assert(dateUpdatedOn != null),
