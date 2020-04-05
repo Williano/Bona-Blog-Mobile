@@ -25,7 +25,7 @@ class Category {
   @override
   String toString() => "$name";
 
-  static List<Category> getCategoryList() => [
+  static List<Category> getAllCategories() => [
         Category(
           name: "Sports",
           imageURL: "assets/images/SPORTS.jpg",
@@ -39,7 +39,7 @@ class Category {
           imageURL: "assets/images/politics.jpg",
         ),
         Category(
-          name: "Entaintment",
+          name: "Entertainment",
           imageURL: "assets/images/Entertainment.jpg",
         ),
         Category(
@@ -51,7 +51,8 @@ class Category {
           imageURL: "assets/images/food.jpg",
         ),
         Category(
-          name: "Software Engineering",
+          name:
+              "Software Engineering Software Engineering Software Engineering",
           imageURL: "assets/images/se.jpg",
         ),
         Category(
@@ -71,7 +72,7 @@ class Category {
           imageURL: "assets/images/politics.jpg",
         ),
         Category(
-          name: "Entaintment",
+          name: "Entertainment",
           imageURL: "assets/images/Entertainment.jpg",
         ),
         Category(
