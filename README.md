@@ -45,18 +45,36 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
 
 
 ## Setup
-To clone and run this application, you'll need a MacBook, Xcode 10.1 and Git installed on your Mac. From your command line:
+To run this app, you will need to follow these 3 steps:
 
-```
-# Clone this repository
-$ git clone https://github.com/Williano/Bona-Mobile.git
+##### 1. Requirements 
+  - a Laptop
 
-# Go into the repository
-$ cd Bona
+  - Xcode or Android Studio 
 
-# Open project in Xcode
-$ open Bona.xcworkspace
-```
+  - Git installed on your Laptop. 
+
+
+##### 2. Install Dart and Flutter
+  - [Dart](https://dart.dev/get-dart)
+
+  - [Flutter](https://flutter.dev/docs/get-started/install)
+
+
+##### 3. Set up and run the app from your command line:
+  ```
+  # Clone this repository
+  $ git clone https://github.com/Williano/Bona-Blog-Mobile.git
+
+  # Go into the repository
+  $ cd Bona-Blog-Mobile
+
+  # Install all dependences 
+  $ flutter pub get
+
+  # Run App
+  $ flutter run
+  ```
 
 ## Features
 * [Web App](https://github.com/Williano/Bona-Blog.git)
@@ -97,13 +115,13 @@ This project is based on the goal of imporving my skills as a developer. I wante
 Created by [Williano](https://williano.github.io/) - feel free to contact me!
 
 ## License
->You can check out the full license [here](https://github.com/Williano/Bona-Mobile/blob/master/LICENSE)
+>You can check out the full license [here](https://github.com/Williano/Bona-Blog-Mobile/blob/master/LICENSE)
 
 This project is licensed under the terms of the **MIT** license.
 
 ## Contributing
 
-1. Fork it (<https://github.com/Williano/Bona-Mobile.git>)
+1. Fork it (<https://github.com/Williano/Bona-Blog-Mobile.git>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
