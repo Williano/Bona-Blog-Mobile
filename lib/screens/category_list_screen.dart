@@ -1,9 +1,10 @@
 import 'package:bona_blog/models/category_model.dart';
+import 'package:bona_blog/utilities/route_constants.dart';
 import 'package:bona_blog/widgets/custom_sliver_app_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 class CategoryListScreen extends StatefulWidget {
-  CategoryListScreen({Key key}) : super(key: key);
+  const CategoryListScreen({Key key}) : super(key: key);
   @override
   _CategoryListScreenState createState() => _CategoryListScreenState();
 }
@@ -39,7 +40,12 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
           SliverChildBuilderDelegate((BuildContext context, int categoryIndex) {
         return GestureDetector(
             onTap: () {
-              print("${_categories[categoryIndex].name}");
+              Map<String, dynamic> data = {
+                "categoryName": _categories[categoryIndex].name,
+                "categoryImageURL": _categories[categoryIndex].imageURL,
+              };
+              Navigator.pushNamed(context, CategoryArticlesListRoute,
+                  arguments: data);
             },
             child: _categoryCard(context, categoryIndex));
       }, childCount: _categories.length),
