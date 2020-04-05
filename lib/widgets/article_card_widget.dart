@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 Widget articleCard(
     {@required BuildContext context,
@@ -99,9 +100,10 @@ Widget articleCard(
                           children: <Widget>[
                             Row(children: <Widget>[
                               Padding(
-                                  padding: const EdgeInsets.only(right: 1.0),
-                                  child: Icon(
-                                    Icons.alarm,
+                                  padding: const EdgeInsets.only(
+                                      right: 1.0, bottom: 1.0),
+                                  child: FaIcon(
+                                    FontAwesomeIcons.solidClock,
                                     size: 13.0,
                                   )),
                               Text(
@@ -112,8 +114,8 @@ Widget articleCard(
                             Row(children: <Widget>[
                               Padding(
                                 padding: const EdgeInsets.only(right: 1.0),
-                                child: Icon(
-                                  Icons.remove_red_eye,
+                                child: FaIcon(
+                                  FontAwesomeIcons.solidEye,
                                   size: 13.0,
                                 ),
                               ),
@@ -127,9 +129,9 @@ Widget articleCard(
                                 onTap: () {
                                   print("$articleTitle bookmarked");
                                 },
-                                child: Icon(
-                                  Icons.bookmark,
-                                  size: 16,
+                                child: FaIcon(
+                                  FontAwesomeIcons.solidBookmark,
+                                  size: 14.0,
                                 ),
                               )
                             ]),
