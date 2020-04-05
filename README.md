@@ -18,7 +18,7 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
 
 ## Screenshots
 
-### iOS
+##### iOS
 
  Feed Screen           |  Categories List Screen
  :-------------------------:|:-------------------------:
@@ -29,7 +29,7 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
 ![notFound](https://user-images.githubusercontent.com/19711677/78471727-176a5400-76f9-11ea-8030-09f0a073fd10.png) | ![notFound](https://user-images.githubusercontent.com/19711677/78471727-176a5400-76f9-11ea-8030-09f0a073fd10.png)
 
 
- ### Android
+ ##### Android
  
  Feed Screen            |  Categories List Screen
  :-------------------------:|:-------------------------:
