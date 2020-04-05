@@ -5,7 +5,7 @@ import 'package:bona_blog/widgets/custom_app_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 class FeedScreen extends StatefulWidget {
-  FeedScreen({Key key}) : super(key: key);
+  const FeedScreen({Key key}) : super(key: key);
   @override
   _FeedScreenState createState() => _FeedScreenState();
 }
