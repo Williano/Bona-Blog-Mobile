@@ -18,16 +18,31 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
 
 ## Screenshots
 
- Feed            |  Categories List 
- :-------------------------:|:-------------------------:
-<img width="348" alt="Screen Shot 2019-04-18 at 1 59 48 PM" src="https://user-images.githubusercontent.com/19711677/56366887-a417bb80-61e3-11e9-9cf4-f96027c4deee.png">   |    <img width="351" alt="Screen Shot 2019-04-18 at 2 15 19 PM" src="https://user-images.githubusercontent.com/19711677/56367305-7d0db980-61e4-11e9-8db4-2746dce0df91.png">
+### iOS
 
-  
+ Feed Screen           |  Categories List Screen
+ :-------------------------:|:-------------------------:
+![Feed](https://user-images.githubusercontent.com/19711677/78471726-16392700-76f9-11ea-80ea-e80a2cb41bc3.png)  |    ![Categories](https://user-images.githubusercontent.com/19711677/78471723-13d6cd00-76f9-11ea-913c-a32588886d07.png)
+
+ Error Screen            |  Categories List Screen
+ :-------------------------:|:-------------------------:
+![notFound](https://user-images.githubusercontent.com/19711677/78471727-176a5400-76f9-11ea-8030-09f0a073fd10.png) | ![notFound](https://user-images.githubusercontent.com/19711677/78471727-176a5400-76f9-11ea-8030-09f0a073fd10.png)
+
+
+ ### Android
+ 
+ Feed Screen            |  Categories List Screen
+ :-------------------------:|:-------------------------:
+![Feed](https://user-images.githubusercontent.com/19711677/78471798-8d6ebb00-76f9-11ea-8525-db25bb9bab37.PNG)   |    ![Categories](https://user-images.githubusercontent.com/19711677/78471796-8c3d8e00-76f9-11ea-9e8c-ebabea441d9d.PNG)
+
+ Error Screen            |  Categories List Screen
+ :-------------------------:|:-------------------------:
+![notFoud](https://user-images.githubusercontent.com/19711677/78471799-8e075180-76f9-11ea-84e7-16a2c1902d62.PNG) | ![notFoud](https://user-images.githubusercontent.com/19711677/78471799-8e075180-76f9-11ea-84e7-16a2c1902d62.PNG)
   
 ## Technologies
 * Dart
 * Flutter
-* 
+
 
 ## Setup
 To clone and run this application, you'll need a MacBook, Xcode 10.1 and Git installed on your Mac. From your command line:
