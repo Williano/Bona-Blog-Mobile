@@ -8,6 +8,9 @@ Widget customFlexibleSpaceBar(
   return FlexibleSpaceBar(
       title: Text(
         "$title",
+        maxLines: 3,
+        textAlign: TextAlign.center,
+        overflow: TextOverflow.ellipsis,
         style: TextStyle(
             color: Theme.of(context).primaryColorLight,
             fontWeight: FontWeight.bold),
