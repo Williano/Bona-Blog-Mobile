@@ -101,7 +101,7 @@ Widget articleCard(
                             Row(children: <Widget>[
                               Padding(
                                   padding: const EdgeInsets.only(
-                                      right: 1.0, bottom: 1.0),
+                                      right: 2.0, bottom: 1.0),
                                   child: FaIcon(
                                     FontAwesomeIcons.solidClock,
                                     size: 13.0,
@@ -113,7 +113,7 @@ Widget articleCard(
                             ]),
                             Row(children: <Widget>[
                               Padding(
-                                padding: const EdgeInsets.only(right: 1.0),
+                                padding: const EdgeInsets.only(right: 2.0),
                                 child: FaIcon(
                                   FontAwesomeIcons.solidEye,
                                   size: 13.0,
@@ -130,7 +130,7 @@ Widget articleCard(
                                   print("$articleTitle bookmarked");
                                 },
                                 child: FaIcon(
-                                  FontAwesomeIcons.solidBookmark,
+                                  FontAwesomeIcons.bookmark,
                                   size: 14.0,
                                 ),
                               )
