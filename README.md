@@ -26,8 +26,7 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
 
  Error Screen            |  Category Article List Screen
  :-------------------------:|:-------------------------:
-![notFound](https://user-images.githubusercontent.com/19711677/78471727-176a5400-76f9-11ea-8030-09f0a073fd10.png) | ![categoryArticles](https://user-images.githubusercontent.com/19711677/78614071-2fde8980-7833-11ea-97cc-80136f70e702.png)
-
+![categoryArticles](https://user-images.githubusercontent.com/19711677/78614071-2fde8980-7833-11ea-97cc-80136f70e702.png)  |  ![notFound](https://user-images.githubusercontent.com/19711677/78471727-176a5400-76f9-11ea-8030-09f0a073fd10.png)
 
  ##### Android
  
