@@ -22,57 +22,122 @@ class _HomeScreenState extends State<HomeScreen> {
           FontAwesomeIcons.gripVertical,
           size: 25.0,
         ),
-        title: Text("Categories")),
+        title: Text(
+          "Categories",
+          style: TextStyle(
+            fontSize: 12.0,
+          ),
+        )),
     BottomNavigationBarItem(
         icon: FaIcon(
           FontAwesomeIcons.users,
           size: 25.0,
         ),
-        title: Text("Authors")),
+        title: Text(
+          "Authors",
+          style: TextStyle(
+            fontSize: 12.0,
+          ),
+        )),
     BottomNavigationBarItem(
         icon: FaIcon(
           Icons.home,
-          size: 25.0,
+          size: 29.0,
         ),
-        title: Text("Feed")),
+        title: Text(
+          "Feed",
+          style: TextStyle(
+            fontSize: 12.0,
+          ),
+        )),
     BottomNavigationBarItem(
         icon: FaIcon(
           Icons.dashboard,
           size: 25.0,
         ),
-        title: Text("Dashboard")),
+        title: Text(
+          "Dashboard",
+          style: TextStyle(
+            fontSize: 12.0,
+          ),
+        )),
     BottomNavigationBarItem(
         icon: FaIcon(
           FontAwesomeIcons.cog,
           size: 26.0,
         ),
-        title: Text("Settings"))
+        title: Text(
+          "Settings",
+          style: TextStyle(
+            fontSize: 12.0,
+          ),
+        ))
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: IndexedStack(
-        index: _currentTabIndex,
-        children: <Widget>[
-          CategoryListScreen(),
-          UndefinedScreen(),
-          FeedScreen(),
-          FeedScreen(),
-          FeedScreen(),
-        ],
-      ),
-      bottomNavigationBar: _appBottomNavigationBar(),
+    return CupertinoTabScaffold(
+      tabBar: _appBottomNavigationBar(),
+      tabBuilder: (BuildContext context, index) {
+        switch (index) {
+          case 0:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: CategoryListScreen(),
+              );
+            });
+
+          case 1:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: UndefinedScreen(),
+              );
+            });
+
+          case 2:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: FeedScreen(),
+              );
+            });
+
+          case 3:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: CategoryListScreen(),
+              );
+            });
+
+          case 4:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: CategoryListScreen(),
+              );
+            });
+        }
+      },
     );
+
+    //CustomScaffold(
+    //   scaffold: Scaffold(
+    //     bottomNavigationBar: _appBottomNavigationBar(),
+    //   ),
+    //   children: <Widget>[
+    //     CategoryListScreen(),
+    //     UndefinedScreen(),
+    //     FeedScreen(),
+    //     FeedScreen(),
+    //     FeedScreen(),
+    //   ],
+    //   onItemTap: (index) {},
+    // );
   }
 
-  Widget _appBottomNavigationBar() => BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        elevation: 0.0,
-        backgroundColor: customColor,
-        selectedItemColor: Theme.of(context).primaryColorDark,
-        unselectedItemColor: Theme.of(context).backgroundColor,
+  Widget _appBottomNavigationBar() => CupertinoTabBar(
         currentIndex: _currentTabIndex,
+        backgroundColor: customColor,
+        activeColor: Colors.black,
+        inactiveColor: Colors.white,
         items: _bottomNavigationBarItems,
         onTap: (int index) {
           setState(() {

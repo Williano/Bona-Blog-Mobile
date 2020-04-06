@@ -1,6 +1,6 @@
 import 'package:bona_blog/routes/router.dart';
 import 'package:bona_blog/screens/home_screen.dart';
-import 'package:bona_blog/utilities/custom_material_color.dart';
+import 'package:bona_blog/utilities/custom_material_colors_utils.dart';
 import 'package:bona_blog/utilities/route_constants.dart';
 // import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
