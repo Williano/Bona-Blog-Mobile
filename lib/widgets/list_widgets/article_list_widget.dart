@@ -1,4 +1,4 @@
-import 'package:bona_blog/widgets/article_card_widget.dart';
+import 'package:bona_blog/widgets/card_widgets/article_card_widget.dart';
 import 'package:flutter/material.dart';
 
 Widget articleListView(
