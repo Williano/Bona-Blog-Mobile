@@ -26,9 +26,10 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
  :-------------------------:|:-------------------------:
 ![Feed](https://user-images.githubusercontent.com/19711677/78471726-16392700-76f9-11ea-80ea-e80a2cb41bc3.png)|![Categories](https://user-images.githubusercontent.com/19711677/78471723-13d6cd00-76f9-11ea-913c-a32588886d07.png)
 
- Error Screen            |  Category Article List Screen
+ Category Article List Screen            |  Error Screen
  :-------------------------:|:-------------------------:
-![categoryArticles](https://user-images.githubusercontent.com/19711677/78614071-2fde8980-7833-11ea-97cc-80136f70e702.png)|![categoryArticles](https://user-images.githubusercontent.com/19711677/78614071-2fde8980-7833-11ea-97cc-80136f70e702.png)
+![categoryArticles](https://user-images.githubusercontent.com/19711677/78614071-2fde8980-7833-11ea-97cc-80136f70e702.png)|![notFound](https://user-images.githubusercontent.com/19711677/78615376-f445be80-7836-11ea-88c4-3e854df80b2a.png)
+
 
 
 ##### iPad 
@@ -39,7 +40,7 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
  :-------------------------:|:-------------------------:
 ![Feed](https://user-images.githubusercontent.com/19711677/78614729-032b7180-7835-11ea-90ae-db51f33dc9d2.PNG)|![Categories](https://user-images.githubusercontent.com/19711677/78614733-06bef880-7835-11ea-9e0a-95a53c500225.PNG)
 
- Error Screen            |  Category Article List Screen
+Category Article List Screen  |  Error Screen
  :-------------------------:|:-------------------------:
 ![CategoryArticles](https://user-images.githubusercontent.com/19711677/78614724-fe66bd80-7834-11ea-9d8f-dde2072c266a.PNG)|![notFoud](https://user-images.githubusercontent.com/19711677/78614732-04f53500-7835-11ea-99d9-ab8cab8fb316.PNG)
   
