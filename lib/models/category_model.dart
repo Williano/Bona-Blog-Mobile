@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class Category {
+class ArticleCategory {
   String name;
   String imageURL;
   String dateCreatedOn;
@@ -8,7 +8,7 @@ class Category {
   String timeCreatedOn;
   String timeUpdatedOn;
 
-  Category(
+  ArticleCategory(
       {@required this.name,
       @required this.imageURL,
       this.dateCreatedOn,
@@ -25,68 +25,68 @@ class Category {
   @override
   String toString() => "$name";
 
-  static List<Category> getAllCategories() => [
-        Category(
+  static List<ArticleCategory> getAllCategories() => [
+        ArticleCategory(
           name: "Sports",
           imageURL: "assets/images/SPORTS.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Art",
           imageURL: "assets/images/art.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Politics",
           imageURL: "assets/images/politics.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Entertainment",
           imageURL: "assets/images/Entertainment.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Programming",
           imageURL: "assets/images/programming.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Food",
           imageURL: "assets/images/food.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Software Engineering ",
           imageURL: "assets/images/se.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Design",
           imageURL: "assets/images/design.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Sports",
           imageURL: "assets/images/SPORTS.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Art",
           imageURL: "assets/images/art.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Politics",
           imageURL: "assets/images/politics.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Entertainment",
           imageURL: "assets/images/Entertainment.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Programming",
           imageURL: "assets/images/programming.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Food",
           imageURL: "assets/images/food.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Software Engineering",
           imageURL: "assets/images/se.jpg",
         ),
-        Category(
+        ArticleCategory(
           name: "Design",
           imageURL: "assets/images/design.jpg",
         ),
