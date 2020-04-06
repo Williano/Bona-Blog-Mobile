@@ -37,11 +37,11 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
  
  Feed Screen            |  Categories List Screen
  :-------------------------:|:-------------------------:
-![Feed](https://user-images.githubusercontent.com/19711677/78471798-8d6ebb00-76f9-11ea-8525-db25bb9bab37.PNG)|![Categories](https://user-images.githubusercontent.com/19711677/78471796-8c3d8e00-76f9-11ea-9e8c-ebabea441d9d.PNG)
+![Feed](https://user-images.githubusercontent.com/19711677/78614729-032b7180-7835-11ea-90ae-db51f33dc9d2.PNG)|![Categories](https://user-images.githubusercontent.com/19711677/78614733-06bef880-7835-11ea-9e0a-95a53c500225.PNG)
 
  Error Screen            |  Category Article List Screen
  :-------------------------:|:-------------------------:
-![notFoud](https://user-images.githubusercontent.com/19711677/78471799-8e075180-76f9-11ea-84e7-16a2c1902d62.PNG)|![CategoryArticles](https://user-images.githubusercontent.com/19711677/78614061-2523f480-7833-11ea-87a0-6baed6a65c25.PNG)
+![CategoryArticles](https://user-images.githubusercontent.com/19711677/78614724-fe66bd80-7834-11ea-9d8f-dde2072c266a.PNG)|![notFoud](https://user-images.githubusercontent.com/19711677/78614732-04f53500-7835-11ea-99d9-ab8cab8fb316.PNG)
   
 ## Technologies
 * Dart
