@@ -22,11 +22,11 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
 
  Feed Screen           |  Categories List Screen
  :-------------------------:|:-------------------------:
-![Feed](https://user-images.githubusercontent.com/19711677/78471726-16392700-76f9-11ea-80ea-e80a2cb41bc3.png)  |    ![Categories](https://user-images.githubusercontent.com/19711677/78471723-13d6cd00-76f9-11ea-913c-a32588886d07.png)
+![Feed](https://user-images.githubusercontent.com/19711677/78471726-16392700-76f9-11ea-80ea-e80a2cb41bc3.png)  | ![Categories](https://user-images.githubusercontent.com/19711677/78471723-13d6cd00-76f9-11ea-913c-a32588886d07.png)
 
- Error Screen            |  Categories List Screen
+ Error Screen            |  Category Article List Screen
  :-------------------------:|:-------------------------:
-![notFound](https://user-images.githubusercontent.com/19711677/78471727-176a5400-76f9-11ea-8030-09f0a073fd10.png) | ![notFound](https://user-images.githubusercontent.com/19711677/78471727-176a5400-76f9-11ea-8030-09f0a073fd10.png)
+![notFound](https://user-images.githubusercontent.com/19711677/78471727-176a5400-76f9-11ea-8030-09f0a073fd10.png) | ![categoryArticles](https://user-images.githubusercontent.com/19711677/78614071-2fde8980-7833-11ea-97cc-80136f70e702.png)
 
 
  ##### Android
@@ -35,9 +35,9 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
  :-------------------------:|:-------------------------:
 ![Feed](https://user-images.githubusercontent.com/19711677/78471798-8d6ebb00-76f9-11ea-8525-db25bb9bab37.PNG)   |    ![Categories](https://user-images.githubusercontent.com/19711677/78471796-8c3d8e00-76f9-11ea-9e8c-ebabea441d9d.PNG)
 
- Error Screen            |  Categories List Screen
+ Error Screen            |  Category Article List Screen
  :-------------------------:|:-------------------------:
-![notFoud](https://user-images.githubusercontent.com/19711677/78471799-8e075180-76f9-11ea-84e7-16a2c1902d62.PNG) | ![notFoud](https://user-images.githubusercontent.com/19711677/78471799-8e075180-76f9-11ea-84e7-16a2c1902d62.PNG)
+![notFoud](https://user-images.githubusercontent.com/19711677/78471799-8e075180-76f9-11ea-84e7-16a2c1902d62.PNG) | ![CategoryArticles](https://user-images.githubusercontent.com/19711677/78614061-2523f480-7833-11ea-87a0-6baed6a65c25.PNG)
   
 ## Technologies
 * Dart
