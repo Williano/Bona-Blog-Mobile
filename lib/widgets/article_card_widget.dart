@@ -21,12 +21,14 @@ Widget articleCard(
         child: Row(
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
-            Container(
-              width: 100,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5.0),
-                  image: DecorationImage(
-                      image: AssetImage("$articleImageUrl"), fit: BoxFit.fill)),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(5.0),
+              child: Image(
+                width: 100.0,
+                height: 100.0,
+                image: AssetImage("$articleImageUrl"),
+                fit: BoxFit.fill,
+              ),
             ),
             Expanded(
               child: Padding(
