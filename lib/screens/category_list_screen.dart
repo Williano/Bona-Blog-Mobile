@@ -1,6 +1,6 @@
 import 'package:bona_blog/models/category_model.dart';
 import 'package:bona_blog/utilities/route_constants.dart';
-import 'package:bona_blog/widgets/custom_sliver_app_bar_widget.dart';
+import 'package:bona_blog/widgets/static_sliver_app_widget.dart';
 import 'package:flutter/material.dart';
 
 class CategoryListScreen extends StatefulWidget {
@@ -25,7 +25,7 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
       body: CustomScrollView(
         physics: BouncingScrollPhysics(),
         slivers: <Widget>[
-          customSliverAppBar(
+          staticSliverAppBar(
               context: context,
               title: "Categories",
               assetImage: "assets/images/food.jpg"),
@@ -60,12 +60,14 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
       elevation: 0,
       child: Stack(
         children: <Widget>[
-          Container(
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5.0),
-                image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage(_categories[categoryIndex].imageURL))),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(5.0),
+            child: Image(
+              height: 200.0,
+              width: 200.0,
+              image: AssetImage(_categories[categoryIndex].imageURL),
+              fit: BoxFit.cover,
+            ),
           ),
           Container(
             decoration: BoxDecoration(
