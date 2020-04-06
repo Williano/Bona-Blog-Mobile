@@ -1,5 +1,5 @@
 import 'package:bona_blog/models/category_model.dart';
-import 'package:bona_blog/utilities/route_constants.dart';
+import 'package:bona_blog/utilities/route_constants_utils.dart';
 import 'package:bona_blog/widgets/static_sliver_app_widget.dart';
 import 'package:flutter/material.dart';
 

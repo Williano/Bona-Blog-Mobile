@@ -5,7 +5,7 @@ import 'package:bona_blog/screens/home_screen.dart';
 import 'package:bona_blog/screens/undefined_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:bona_blog/utilities/route_constants.dart';
+import 'package:bona_blog/utilities/route_constants_utils.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {

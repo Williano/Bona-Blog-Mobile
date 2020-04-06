@@ -1,6 +1,6 @@
 import 'package:bona_blog/models/article_model.dart';
 import 'package:bona_blog/models/category_model.dart';
-import 'package:bona_blog/utilities/route_constants.dart';
+import 'package:bona_blog/utilities/route_constants_utils.dart';
 import 'package:bona_blog/widgets/article_list_widget.dart';
 import 'package:bona_blog/widgets/custom_app_bar_widget.dart';
 import 'package:flutter/material.dart';
