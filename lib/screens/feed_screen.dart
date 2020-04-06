@@ -97,14 +97,14 @@ class _FeedScreenState extends State<FeedScreen> {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
       child: Stack(
         children: <Widget>[
-          Container(
-            width: 120.0,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.0),
-                image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image:
-                        AssetImage("${_categories[categoryIndex].imageURL}"))),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: Image(
+              height: 120.0,
+              width: 120.0,
+              image: AssetImage("${_categories[categoryIndex].imageURL}"),
+              fit: BoxFit.cover,
+            ),
           ),
           Container(
             width: 120.0,
