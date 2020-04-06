@@ -1,7 +1,9 @@
 import 'package:bona_blog/models/category_model.dart';
+import 'package:bona_blog/screens/category_articles_list_screen.dart';
 import 'package:bona_blog/utilities/route_constants_utils.dart';
 import 'package:bona_blog/widgets/static_sliver_app_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class CategoryListScreen extends StatefulWidget {
   const CategoryListScreen({Key key}) : super(key: key);
@@ -10,12 +12,12 @@ class CategoryListScreen extends StatefulWidget {
 }
 
 class _CategoryListScreenState extends State<CategoryListScreen> {
-  List<Category> _categories;
+  List<ArticleCategory> _categories;
 
   @override
   void initState() {
     super.initState();
-    _categories = Category.getAllCategories();
+    _categories = ArticleCategory.getAllCategories();
   }
 
   @override
@@ -35,22 +37,34 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
     );
   }
 
-  Widget _categoriesSliverGrid() => SliverGrid(
-      delegate:
-          SliverChildBuilderDelegate((BuildContext context, int categoryIndex) {
-        return GestureDetector(
-            onTap: () {
-              Map<String, dynamic> data = {
-                "categoryName": _categories[categoryIndex].name,
-                "categoryImageURL": _categories[categoryIndex].imageURL,
-              };
-              Navigator.pushNamed(context, CategoryArticlesListRoute,
-                  arguments: data);
-            },
-            child: _categoryCard(context, categoryIndex));
-      }, childCount: _categories.length),
-      gridDelegate:
-          SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2));
+  Widget _categoriesSliverGrid() {
+    return SliverGrid(
+        delegate: SliverChildBuilderDelegate(
+            (BuildContext context, int categoryIndex) {
+          return _onCategoryTapped(
+              context: context, categoryIndex: categoryIndex);
+        }, childCount: _categories.length),
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2));
+  }
+
+  Widget _onCategoryTapped({BuildContext context, int categoryIndex}) {
+    return GestureDetector(
+        onTap: () {
+          Map<String, dynamic> data = {
+            "categoryName": _categories[categoryIndex].name,
+            "categoryImageURL": _categories[categoryIndex].imageURL,
+          };
+
+          pushNewScreenWithRouteSettings(context,
+              screen: CateoryArticlesListScreen(
+                categoryName: data["categoryName"],
+                categoryImageURL: data["categoryImageURL"],
+              ),
+              settings: RouteSettings(name: CategoryArticlesListRoute));
+        },
+        child: _categoryCard(context, categoryIndex));
+  }
 
   Widget _categoryCard(BuildContext context, int categoryIndex) {
     // Wrap Future Builder around
