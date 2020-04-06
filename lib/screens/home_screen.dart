@@ -16,16 +16,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentTabIndex = 2;
 
-  final PageStorageBucket bucket = PageStorageBucket();
-
-  List<Widget> screens = [
-    CategoryListScreen(key: PageStorageKey("Category Screen")),
-    UndefinedScreen(key: PageStorageKey("Undefined Screen")),
-    FeedScreen(key: PageStorageKey("Feed Screen")),
-    FeedScreen(key: PageStorageKey("Feed Screen")),
-    FeedScreen(key: PageStorageKey("Feed Screen")),
-  ];
-
   List<BottomNavigationBarItem> _bottomNavigationBarItems = [
     BottomNavigationBarItem(
         icon: FaIcon(
@@ -62,9 +52,15 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageStorage(
-        bucket: bucket,
-        child: screens[_currentTabIndex],
+      body: IndexedStack(
+        index: _currentTabIndex,
+        children: <Widget>[
+          CategoryListScreen(),
+          UndefinedScreen(),
+          FeedScreen(),
+          FeedScreen(),
+          FeedScreen(),
+        ],
       ),
       bottomNavigationBar: _appBottomNavigationBar(),
     );
