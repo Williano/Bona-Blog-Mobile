@@ -69,7 +69,7 @@ Widget articleCard(
                                     child: Text(
                                       "By",
                                       style: TextStyle(
-                                          color: Colors.grey, fontSize: 13),
+                                          color: Colors.grey, fontSize: 11.0),
                                     ),
                                   ),
                                   Text(
@@ -86,7 +86,7 @@ Widget articleCard(
                             ),
                             Text(
                               "$articleDatePublishedOn",
-                              style: TextStyle(fontSize: 12),
+                              style: TextStyle(fontSize: 11.0),
                             )
                           ],
                         ),
@@ -106,11 +106,12 @@ Widget articleCard(
                                       right: 2.0, bottom: 1.0),
                                   child: FaIcon(
                                     FontAwesomeIcons.solidClock,
-                                    size: 13.0,
+                                    size: 12.0,
                                   )),
                               Text(
                                 "$articleReadTime min read",
-                                style: TextStyle(fontSize: 13),
+                                style: TextStyle(fontSize: 12.0),
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ]),
                             Row(children: <Widget>[
@@ -118,12 +119,13 @@ Widget articleCard(
                                 padding: const EdgeInsets.only(right: 2.0),
                                 child: FaIcon(
                                   FontAwesomeIcons.solidEye,
-                                  size: 13.0,
+                                  size: 12.0,
                                 ),
                               ),
                               Text(
                                 "$articleNumberOfViews",
-                                style: TextStyle(fontSize: 13),
+                                style: TextStyle(fontSize: 12),
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ]),
                             Row(children: <Widget>[
