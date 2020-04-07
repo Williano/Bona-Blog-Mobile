@@ -60,26 +60,27 @@ Widget articleCard(
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 3.0),
+                            Expanded(
                               child: Row(
                                 children: <Widget>[
                                   Padding(
-                                    padding: const EdgeInsets.only(right: 4.0),
+                                    padding: const EdgeInsets.only(right: 1.5),
                                     child: Text(
                                       "By",
                                       style: TextStyle(
                                           color: Colors.grey, fontSize: 11.0),
                                     ),
                                   ),
-                                  Text(
-                                    "$articleAuthor",
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 0.4),
-                                    overflow: TextOverflow.ellipsis,
+                                  Expanded(
+                                    child: Text(
+                                      "$articleAuthor",
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w600,
+                                          letterSpacing: 0.4),
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
                                   )
                                 ],
                               ),
