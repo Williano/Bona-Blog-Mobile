@@ -77,8 +77,8 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
           ClipRRect(
             borderRadius: BorderRadius.circular(5.0),
             child: Image(
-              height: 200.0,
-              width: 200.0,
+              height: double.infinity,
+              width: double.infinity,
               image: AssetImage(_categories[categoryIndex].imageURL),
               fit: BoxFit.cover,
             ),
