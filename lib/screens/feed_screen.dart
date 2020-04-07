@@ -33,32 +33,40 @@ class _FeedScreenState extends State<FeedScreen> {
         body: Container(
             color: Theme.of(context).backgroundColor,
             child: Padding(
-              padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+              padding: const EdgeInsets.only(top: 10.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Padding(
-                      padding: const EdgeInsets.only(top: 10.0),
-                      child:
-                          _customTitle(context: context, title: "Categories")),
-                  SizedBox(
-                    height: 10.0,
-                  ),
+                      padding: const EdgeInsets.only(left: 13.0),
+                      child: Row(
+                        children: <Widget>[
+                          _customTitle(context: context, title: "Categories"),
+                        ],
+                      )),
                   Container(
                       height: 130.0,
                       color: Theme.of(context).backgroundColor,
                       child:
                           _horizontalCategoriesListBuilder(context: context)),
                   SizedBox(
-                    height: 10.0,
+                    height: 30.0,
                   ),
-                  _customTitle(context: context, title: "Latest Articles"),
-                  SizedBox(
-                    height: 10.0,
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 13.0),
+                    child: Row(
+                      children: <Widget>[
+                        _customTitle(
+                            context: context, title: "Latest Articles"),
+                      ],
+                    ),
                   ),
                   Expanded(
-                    child:
-                        articleListView(context: context, articles: _articles),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                      child: articleListView(
+                          context: context, articles: _articles),
+                    ),
                   )
                 ],
               ),
@@ -76,6 +84,7 @@ class _FeedScreenState extends State<FeedScreen> {
 
   Widget _horizontalCategoriesListBuilder({@required BuildContext context}) {
     return ListView.builder(
+        padding: const EdgeInsets.symmetric(horizontal: 10.0),
         itemCount: _categories.length,
         physics: BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
