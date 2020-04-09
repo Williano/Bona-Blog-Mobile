@@ -27,50 +27,42 @@ class _FeedScreenState extends State<FeedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
-        appBar:
-            customAppBar(context: context, showBackArrow: false, title: "Feed"),
-        body: Container(
-            color: Theme.of(context).backgroundColor,
-            child: Padding(
-              padding: const EdgeInsets.only(top: 10.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+      appBar:
+          customAppBar(context: context, showBackArrow: false, title: "Feed"),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 5.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+                padding: const EdgeInsets.only(left: 12.0, bottom: 5.0),
+                child: Row(
+                  children: <Widget>[
+                    _customTitle(context: context, title: "Categories"),
+                  ],
+                )),
+            Container(
+                height: 130.0,
+                // color: Theme.of(context).backgroundColor,
+                child: _horizontalCategoriesListBuilder(context: context)),
+            SizedBox(
+              height: 30.0,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 13.0),
+              child: Row(
                 children: <Widget>[
-                  Padding(
-                      padding: const EdgeInsets.only(left: 13.0),
-                      child: Row(
-                        children: <Widget>[
-                          _customTitle(context: context, title: "Categories"),
-                        ],
-                      )),
-                  Container(
-                      height: 130.0,
-                      color: Theme.of(context).backgroundColor,
-                      child:
-                          _horizontalCategoriesListBuilder(context: context)),
-                  SizedBox(
-                    height: 30.0,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 13.0),
-                    child: Row(
-                      children: <Widget>[
-                        _customTitle(
-                            context: context, title: "Latest Articles"),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
-                      child: articleListView(
-                          context: context, articles: _articles),
-                    ),
-                  )
+                  _customTitle(context: context, title: "Latest Articles"),
                 ],
               ),
-            )));
+            ),
+            Expanded(
+              child: articleListView(context: context, articles: _articles),
+            )
+          ],
+        ),
+      ),
+    );
   }
 
   Widget _customTitle(
@@ -113,9 +105,10 @@ class _FeedScreenState extends State<FeedScreen> {
   }
 
   Widget _categoryCard({BuildContext context, int categoryIndex}) {
-    return Card(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+    return Padding(
+      padding: const EdgeInsets.only(right: 5.0),
       child: Stack(
+        overflow: Overflow.clip,
         children: <Widget>[
           ClipRRect(
             borderRadius: BorderRadius.circular(8.0),
@@ -123,14 +116,15 @@ class _FeedScreenState extends State<FeedScreen> {
               height: 120.0,
               width: 120.0,
               image: AssetImage("${_categories[categoryIndex].imageURL}"),
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
             ),
           ),
           Container(
             width: 120.0,
+            height: 120.0,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.0),
-                color: Colors.black.withOpacity(0.7)),
+                color: Theme.of(context).primaryColorDark.withOpacity(0.7)),
           ),
           Positioned(
             top: 20.0,
@@ -154,4 +148,48 @@ class _FeedScreenState extends State<FeedScreen> {
       ),
     );
   }
+
+  // Widget _categoryCard({BuildContext context, int categoryIndex}) {
+  //   return Card(
+  //     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+  //     child: Stack(
+  //       overflow: Overflow.clip,
+  //       children: <Widget>[
+  //         ClipRRect(
+  //           borderRadius: BorderRadius.circular(8.0),
+  //           child: Image(
+  //             height: 120.0,
+  //             width: 120.0,
+  //             image: AssetImage("${_categories[categoryIndex].imageURL}"),
+  //             fit: BoxFit.fill,
+  //           ),
+  //         ),
+  //         Container(
+  //           width: 120.0,
+  //           decoration: BoxDecoration(
+  //               borderRadius: BorderRadius.circular(8.0),
+  //               color: Theme.of(context).primaryColorDark.withOpacity(0.7)),
+  //         ),
+  //         Positioned(
+  //           top: 20.0,
+  //           left: 3.0,
+  //           right: 3.0,
+  //           bottom: 20.0,
+  //           child: Center(
+  //             child: Text(
+  //               "${_categories[categoryIndex].name}",
+  //               textAlign: TextAlign.center,
+  //               maxLines: 2,
+  //               overflow: TextOverflow.ellipsis,
+  //               style: TextStyle(
+  //                   fontWeight: FontWeight.w400,
+  //                   color: Theme.of(context).primaryColorLight,
+  //                   fontSize: 18.0),
+  //             ),
+  //           ),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 }
