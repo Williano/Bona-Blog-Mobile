@@ -23,7 +23,6 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
       body: CustomScrollView(
         physics: BouncingScrollPhysics(),
         slivers: <Widget>[
@@ -63,51 +62,97 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
               ),
               settings: RouteSettings(name: CategoryArticlesListRoute));
         },
-        child: _categoryCard(context, categoryIndex));
+        child: Padding(
+          padding: const EdgeInsets.only(top: 10.0, left: 5.0, right: 5.0),
+          child: _categoryCard(context, categoryIndex),
+        ));
   }
 
   Widget _categoryCard(BuildContext context, int categoryIndex) {
     // Wrap Future Builder around
-    return Card(
-      // margin: EdgeInsets.fromLTRB(6.0, 6.0, 6.0, 0.0),
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-      elevation: 0,
-      child: Stack(
-        children: <Widget>[
-          ClipRRect(
-            borderRadius: BorderRadius.circular(5.0),
-            child: Image(
-              height: double.infinity,
-              width: double.infinity,
-              image: AssetImage(_categories[categoryIndex].imageURL),
-              fit: BoxFit.cover,
-            ),
+    return Stack(
+      children: <Widget>[
+        ClipRRect(
+          borderRadius: BorderRadius.circular(8.0),
+          child: Image(
+            height: double.infinity,
+            width: double.infinity,
+            image: AssetImage(_categories[categoryIndex].imageURL),
+            fit: BoxFit.fill,
           ),
-          Container(
+        ),
+        ClipRRect(
+          child: Container(
+            height: double.infinity,
+            width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(5.0),
+              borderRadius: BorderRadius.circular(8.0),
               color: Colors.black.withOpacity(0.7),
             ),
           ),
-          Positioned(
-            left: 10.0,
-            right: 10.0,
-            bottom: 20.0,
-            child: Text(
-              _categories[categoryIndex].name,
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                color: Theme.of(context).primaryColorLight,
-                fontSize: 18.0,
-                fontWeight: FontWeight.w400,
-                letterSpacing: 1.0,
-              ),
-              textAlign: TextAlign.center,
+        ),
+        Positioned(
+          left: 10.0,
+          right: 10.0,
+          bottom: 20.0,
+          child: Text(
+            _categories[categoryIndex].name,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              color: Theme.of(context).primaryColorLight,
+              fontSize: 18.0,
+              fontWeight: FontWeight.w400,
+              letterSpacing: 1.0,
             ),
+            textAlign: TextAlign.center,
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
+
+  //   Widget _categoryCard(BuildContext context, int categoryIndex) {
+  //   // Wrap Future Builder around
+  //   return Card(
+  //     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+  //     elevation: 0,
+  //     child: Stack(
+  //       children: <Widget>[
+  //         ClipRRect(
+  //           borderRadius: BorderRadius.circular(5.0),
+  //           child: Image(
+  //             height: double.infinity,
+  //             width: double.infinity,
+  //             image: AssetImage(_categories[categoryIndex].imageURL),
+  //             fit: BoxFit.cover,
+  //           ),
+  //         ),
+  //         Container(
+  //           decoration: BoxDecoration(
+  //             borderRadius: BorderRadius.circular(5.0),
+  //             color: Colors.black.withOpacity(0.7),
+  //           ),
+  //         ),
+  //         Positioned(
+  //           left: 10.0,
+  //           right: 10.0,
+  //           bottom: 20.0,
+  //           child: Text(
+  //             _categories[categoryIndex].name,
+  //             maxLines: 2,
+  //             overflow: TextOverflow.ellipsis,
+  //             style: TextStyle(
+  //               color: Theme.of(context).primaryColorLight,
+  //               fontSize: 18.0,
+  //               fontWeight: FontWeight.w400,
+  //               letterSpacing: 1.0,
+  //             ),
+  //             textAlign: TextAlign.center,
+  //           ),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 }
