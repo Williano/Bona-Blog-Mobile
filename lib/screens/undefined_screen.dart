@@ -1,6 +1,6 @@
-import 'package:bona_blog/utilities/custom_material_colors_utils.dart';
-import 'package:bona_blog/utilities/route_constants_utils.dart';
+import 'package:bona_blog/screens/feed_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class UndefinedScreen extends StatelessWidget {
   final String name;
@@ -10,10 +10,13 @@ class UndefinedScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         elevation: 0,
-        title: Text("$name Not Found"),
+        backgroundColor: Theme.of(context).primaryColor,
+        title: Text(
+          "$name Not Found",
+          style: TextStyle(color: Theme.of(context).primaryColorLight),
+        ),
         centerTitle: true,
       ),
       body: Stack(
@@ -25,7 +28,7 @@ class UndefinedScreen extends StatelessWidget {
                     fit: BoxFit.fill)),
           ),
           Container(
-            color: Colors.black.withOpacity(0.3),
+            color: Theme.of(context).primaryColorDark.withOpacity(0.3),
           ),
           Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -44,10 +47,12 @@ class UndefinedScreen extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(5.0)),
                       onPressed: () {
-                        Navigator.pushReplacementNamed(
-                            context, HomeScreenRoute);
+                        pushNewScreen(
+                          context,
+                          screen: FeedScreen(),
+                        );
                       },
-                      color: customColor,
+                      color: Theme.of(context).buttonColor,
                       icon: Icon(
                         Icons.home,
                         color: Colors.white,
