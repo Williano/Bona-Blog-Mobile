@@ -1,7 +1,6 @@
 import 'package:bona_blog/screens/category_list_screen.dart';
 import 'package:bona_blog/screens/feed_screen.dart';
 import 'package:bona_blog/screens/undefined_screen.dart';
-import 'package:bona_blog/utilities/custom_material_colors_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -18,42 +17,44 @@ class _HomeScreenState extends State<HomeScreen> {
   PersistentTabController _controller;
   int _currentTabIndex = 2;
 
-  List<PersistentBottomNavBarItem> _persistentBottomNavigationBarItems = [
-    PersistentBottomNavBarItem(
-        icon: FaIcon(
-          FontAwesomeIcons.gripVertical,
-        ),
-        activeColor: Colors.black,
-        inactiveColor: Color(0xFFEDF3F3),
-        title: ("Categories")),
-    PersistentBottomNavBarItem(
-        icon: FaIcon(
-          FontAwesomeIcons.users,
-        ),
-        activeColor: Colors.black,
-        inactiveColor: Color(0xFFEDF3F3),
-        title: ("Authors")),
-    PersistentBottomNavBarItem(
-        icon: FaIcon(
-          Icons.home,
-          size: 32,
-        ),
-        activeColor: Colors.black,
-        inactiveColor: Color(0xFFEDF3F3),
-        title: ("Feed")),
-    PersistentBottomNavBarItem(
-        icon: FaIcon(Icons.dashboard, size: 30),
-        activeColor: Colors.black,
-        inactiveColor: Color(0xFFEDF3F3),
-        title: ("Dashboard")),
-    PersistentBottomNavBarItem(
-        icon: FaIcon(
-          FontAwesomeIcons.cog,
-        ),
-        activeColor: Colors.black,
-        inactiveColor: Color(0xFFEDF3F3),
-        title: ("Settings"))
-  ];
+  List<PersistentBottomNavBarItem> _persistentBottomNavigationBarItems(
+          BuildContext context) =>
+      [
+        PersistentBottomNavBarItem(
+            icon: FaIcon(
+              FontAwesomeIcons.gripVertical,
+            ),
+            activeColor: Theme.of(context).buttonColor,
+            inactiveColor: Theme.of(context).primaryColorLight,
+            title: ("Categories")),
+        PersistentBottomNavBarItem(
+            icon: FaIcon(
+              FontAwesomeIcons.users,
+            ),
+            activeColor: Theme.of(context).buttonColor,
+            inactiveColor: Theme.of(context).primaryColorLight,
+            title: ("Authors")),
+        PersistentBottomNavBarItem(
+            icon: FaIcon(
+              Icons.home,
+              size: 32,
+            ),
+            activeColor: Theme.of(context).buttonColor,
+            inactiveColor: Theme.of(context).primaryColorLight,
+            title: ("Feed")),
+        PersistentBottomNavBarItem(
+            icon: FaIcon(Icons.dashboard, size: 30),
+            activeColor: Theme.of(context).buttonColor,
+            inactiveColor: Theme.of(context).primaryColorLight,
+            title: ("Dashboard")),
+        PersistentBottomNavBarItem(
+            icon: FaIcon(
+              FontAwesomeIcons.cog,
+            ),
+            activeColor: Theme.of(context).buttonColor,
+            inactiveColor: Theme.of(context).primaryColorLight,
+            title: ("Settings"))
+      ];
 
   @override
   void initState() {
@@ -73,14 +74,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return _appBottomNavigationBar();
+    return _appBottomNavigationBar(context);
   }
 
-  Widget _appBottomNavigationBar() => PersistentTabView(
+  Widget _appBottomNavigationBar(BuildContext context) => PersistentTabView(
         controller: _controller,
-        items: _persistentBottomNavigationBarItems,
+        items: _persistentBottomNavigationBarItems(context),
         screens: _buildScreens(),
-        backgroundColor: customColor,
+        backgroundColor: Theme.of(context).bottomAppBarColor,
         showElevation: false,
         selectedIndex: _currentTabIndex,
         iconSize: 26.0,
