@@ -7,6 +7,7 @@ Widget customAppBar(
   return AppBar(
     automaticallyImplyLeading: showBackArrow,
     elevation: 0,
+    backgroundColor: Theme.of(context).primaryColor,
     title: Text(
       "$title",
       style: TextStyle(
