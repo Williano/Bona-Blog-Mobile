@@ -78,11 +78,11 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
  ##### Big Android Phones
  Feed Screen            |  Categories List Screen
  :-------------------------:|:-------------------------:
-![Feed](https://user-images.githubusercontent.com/19711677/78614729-032b7180-7835-11ea-90ae-db51f33dc9d2.PNG)|![Categories](https://user-images.githubusercontent.com/19711677/78614733-06bef880-7835-11ea-9e0a-95a53c500225.PNG)
+![Feed](https://user-images.githubusercontent.com/19711677/79617949-55d71a00-80ce-11ea-9edc-10ef4689b4c6.PNG)|![Categories](https://user-images.githubusercontent.com/19711677/79617934-4eb00c00-80ce-11ea-9c97-ffaa84a6294b.PNG)
 
 Category Article List Screen  |  Error Screen
  :-------------------------:|:-------------------------:
-![CategoryArticles](https://user-images.githubusercontent.com/19711677/78614724-fe66bd80-7834-11ea-9d8f-dde2072c266a.PNG)|![notFoud](https://user-images.githubusercontent.com/19711677/78614732-04f53500-7835-11ea-99d9-ab8cab8fb316.PNG)
+![CategoryArticles](https://user-images.githubusercontent.com/19711677/79617947-5374c000-80ce-11ea-8c40-112112ae0d20.PNG)|![notFoud](https://user-images.githubusercontent.com/19711677/79617954-57a0dd80-80ce-11ea-9ac4-58a76174e7ec.PNG)
 
  ##### Small Android Phones
  Feed Screen            |  Categories List Screen
