@@ -24,11 +24,11 @@ An Open-Source bloggig plaform like [Medium](https://medium.com/) and [Real Pyth
 
  Feed Screen           |  Categories List Screen
  :-------------------------:|:-------------------------:
-![Feed](https://user-images.githubusercontent.com/19711677/78471726-16392700-76f9-11ea-80ea-e80a2cb41bc3.png)|![Categories](https://user-images.githubusercontent.com/19711677/78471723-13d6cd00-76f9-11ea-913c-a32588886d07.png)
+![Feed](https://user-images.githubusercontent.com/19711677/79617784-ed883880-80cd-11ea-95c0-15ce5d5939b0.png)|![Categories](https://user-images.githubusercontent.com/19711677/79617788-f11bbf80-80cd-11ea-9535-0109edf59f80.png)
 
  Category Article List Screen            |  Error Screen
  :-------------------------:|:-------------------------:
-![categoryArticles](https://user-images.githubusercontent.com/19711677/78614071-2fde8980-7833-11ea-97cc-80136f70e702.png)|![notFound](https://user-images.githubusercontent.com/19711677/78615376-f445be80-7836-11ea-88c4-3e854df80b2a.png)
+![categoryArticles](https://user-images.githubusercontent.com/19711677/79617792-f416b000-80cd-11ea-9ebf-1ac28a85f207.png)|![notFound](https://user-images.githubusercontent.com/19711677/79617786-efea9280-80cd-11ea-8628-dd926999c611.png)
 
 
 ##### Small iPhones
