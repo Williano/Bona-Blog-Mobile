@@ -1,18 +1,18 @@
 import 'package:meta/meta.dart';
 
 class Article {
-  int articleId;
-  String author;
-  String title;
-  String imageURL;
-  String category;
-  String body;
-  int numberOfViews;
-  int readTime;
-  String datePublishedOn;
-  String dateUpdatedOn;
-  String timePublishedOn;
-  String timeUpdatedOn;
+  final int articleId;
+  final String author;
+  final String title;
+  final String imageURL;
+  final String category;
+  final String body;
+  final int numberOfViews;
+  final int readTime;
+  final String datePublishedOn;
+  final String dateUpdatedOn;
+  final String timePublishedOn;
+  final String timeUpdatedOn;
 
   Article(
       {this.articleId,
