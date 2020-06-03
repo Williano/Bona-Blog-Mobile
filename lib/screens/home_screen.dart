@@ -83,7 +83,6 @@ class _HomeScreenState extends State<HomeScreen> {
         screens: _buildScreens(),
         backgroundColor: Theme.of(context).bottomAppBarColor,
         showElevation: false,
-        selectedIndex: _currentTabIndex,
         iconSize: 26.0,
         navBarCurve: NavBarCurve.none,
         navBarStyle: NavBarStyle.simple,
