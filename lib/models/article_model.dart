@@ -1,31 +1,34 @@
-import 'package:flutter/foundation.dart';
+import 'package:meta/meta.dart';
 
 class Article {
-  String author;
-  String title;
-  String imageURL;
-  String category;
-  String body;
-  int numberOfViews;
-  int readTime;
-  String datePublishedOn;
-  String dateUpdatedOn;
-  String timePublishedOn;
-  String timeUpdatedOn;
+  final int articleId;
+  final String author;
+  final String title;
+  final String imageURL;
+  final String category;
+  final String body;
+  final int numberOfViews;
+  final int readTime;
+  final String datePublishedOn;
+  final String dateUpdatedOn;
+  final String timePublishedOn;
+  final String timeUpdatedOn;
 
   Article(
-      {@required this.author,
-      @required this.title,
-      @required this.imageURL,
-      @required this.category,
-      @required this.body,
-      @required this.numberOfViews,
-      @required this.readTime,
+      {this.articleId,
+      this.author,
+      this.title,
+      this.imageURL,
+      this.category,
+      this.body,
+      this.numberOfViews,
+      this.readTime,
       this.datePublishedOn,
       this.dateUpdatedOn,
       this.timePublishedOn,
       this.timeUpdatedOn})
-      : assert(author != null),
+      : assert(articleId != null),
+        assert(author != null),
         assert(title != null),
         assert(imageURL != null),
         assert(category != null),
