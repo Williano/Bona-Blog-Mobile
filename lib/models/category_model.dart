@@ -1,21 +1,22 @@
-import 'package:flutter/foundation.dart';
-
 class ArticleCategory {
-  String name;
-  String imageURL;
-  String dateCreatedOn;
-  String dateUpdatedOn;
-  String timeCreatedOn;
-  String timeUpdatedOn;
+  final String categoryId;
+  final String name;
+  final String imageURL;
+  final String dateCreatedOn;
+  final String dateUpdatedOn;
+  final String timeCreatedOn;
+  final String timeUpdatedOn;
 
   ArticleCategory(
-      {@required this.name,
-      @required this.imageURL,
+      {this.categoryId,
+      this.name,
+      this.imageURL,
       this.dateCreatedOn,
       this.dateUpdatedOn,
       this.timeCreatedOn,
       this.timeUpdatedOn})
-      : assert(name != null),
+      : assert(categoryId != null),
+        assert(name != null),
         assert(imageURL != null);
   // assert(dateCreatedOn != null),
   // assert(dateUpdatedOn != null),
