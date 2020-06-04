@@ -1,6 +1,6 @@
-import 'package:bona_blog/screens/category/category_list_screen/category_list_screen.dart';
-import 'package:bona_blog/screens/feed_screen.dart';
-import 'package:bona_blog/screens/undefined_screen.dart';
+import 'package:bona_blog/ui/screens/category/category_list_screen/category_list_screen.dart';
+import 'package:bona_blog/ui/screens/feed_screen.dart';
+import 'package:bona_blog/ui/screens/undefined_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
