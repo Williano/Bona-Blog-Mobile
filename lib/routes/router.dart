@@ -1,5 +1,5 @@
-import 'package:bona_blog/ui/screens/category/category_articles_list_screen/category_articles_list_screen.dart';
-import 'package:bona_blog/ui/screens/category/category_list_screen/category_list_screen.dart';
+import 'package:bona_blog/ui/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
+import 'package:bona_blog/ui/screens/category_screens/category_list_screen/category_list_screen.dart';
 import 'package:bona_blog/ui/screens/feed_screen.dart';
 import 'package:bona_blog/ui/screens/home_screen.dart';
 import 'package:bona_blog/ui/screens/undefined_screen.dart';
