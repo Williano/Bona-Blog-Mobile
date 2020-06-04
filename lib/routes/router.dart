@@ -1,8 +1,8 @@
-import 'package:bona_blog/screens/category/category_articles_list_screen/category_articles_list_screen.dart';
-import 'package:bona_blog/screens/category/category_list_screen/category_list_screen.dart';
-import 'package:bona_blog/screens/feed_screen.dart';
-import 'package:bona_blog/screens/home_screen.dart';
-import 'package:bona_blog/screens/undefined_screen.dart';
+import 'package:bona_blog/ui/screens/category/category_articles_list_screen/category_articles_list_screen.dart';
+import 'package:bona_blog/ui/screens/category/category_list_screen/category_list_screen.dart';
+import 'package:bona_blog/ui/screens/feed_screen.dart';
+import 'package:bona_blog/ui/screens/home_screen.dart';
+import 'package:bona_blog/ui/screens/undefined_screen.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
