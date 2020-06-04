@@ -1,11 +1,11 @@
-import 'package:bona_blog/screens/category_articles_list_screen.dart';
-import 'package:bona_blog/screens/category_list_screen.dart';
+import 'package:bona_blog/screens/category/category_articles_list_screen/category_articles_list_screen.dart';
+import 'package:bona_blog/screens/category/category_list_screen/category_list_screen.dart';
 import 'package:bona_blog/screens/feed_screen.dart';
 import 'package:bona_blog/screens/home_screen.dart';
 import 'package:bona_blog/screens/undefined_screen.dart';
+import 'package:bona_blog/utils/route_constants_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:bona_blog/utilities/route_constants_utils.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
