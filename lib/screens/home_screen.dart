@@ -1,4 +1,4 @@
-import 'package:bona_blog/screens/category_list_screen.dart';
+import 'package:bona_blog/screens/category/category_list_screen/category_list_screen.dart';
 import 'package:bona_blog/screens/feed_screen.dart';
 import 'package:bona_blog/screens/undefined_screen.dart';
 import 'package:flutter/cupertino.dart';
