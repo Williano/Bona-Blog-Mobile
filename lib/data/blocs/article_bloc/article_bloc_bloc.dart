@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:meta/meta.dart';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
@@ -13,7 +14,5 @@ class ArticleBlocBloc extends Bloc<ArticleBlocEvent, ArticleBlocState> {
   @override
   Stream<ArticleBlocState> mapEventToState(
     ArticleBlocEvent event,
-  ) async* {
-    // TODO: implement mapEventToState
-  }
+  ) async* {}
 }
