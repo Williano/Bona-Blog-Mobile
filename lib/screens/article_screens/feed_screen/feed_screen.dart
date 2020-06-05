@@ -4,8 +4,7 @@ import 'package:bona_blog/screens/article_screens/feed_screen/category_card_widg
 import 'package:bona_blog/screens/article_screens/feed_screen/custom_title_widget.dart';
 import 'package:bona_blog/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
-import 'package:bona_blog/utils/widgets/app_bar_widgets/custom_app_bar_widget.dart';
-import 'package:bona_blog/utils/widgets/card_widgets/article_card_widget.dart';
+import 'package:bona_blog/widgets/card_widgets/article_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
@@ -29,8 +28,18 @@ class _FeedScreenState extends State<FeedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:
-          customAppBar(context: context, showBackArrow: false, title: "Feed"),
+      appBar: AppBar(
+        automaticallyImplyLeading: true,
+        elevation: 0,
+        backgroundColor: Theme.of(context).primaryColor,
+        title: Text(
+          "Feed",
+          style: TextStyle(
+              color: Theme.of(context).primaryColorLight,
+              fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.only(top: 5.0),
         child: Column(
