@@ -1,6 +1,6 @@
 import 'package:bona_blog/models/article_models/article_model.dart';
-import 'package:bona_blog/utils/widgets/card_widgets/article_card_widget.dart';
-import 'package:bona_blog/utils/widgets/sliver_widgets/dynamic_sliver_app_bar_widget.dart';
+import 'package:bona_blog/widgets/card_widgets/article_card_widget.dart';
+import 'package:bona_blog/widgets/sliver_widgets/dynamic_sliver_app_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 class CateoryArticlesListScreen extends StatefulWidget {

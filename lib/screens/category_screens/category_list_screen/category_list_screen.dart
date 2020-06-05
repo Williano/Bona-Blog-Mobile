@@ -1,8 +1,8 @@
 import 'package:bona_blog/models/category_models/category_model.dart';
-import 'package:bona_blog/screens/article_screens/feed_screen/category_card_widget.dart';
 import 'package:bona_blog/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
+import 'package:bona_blog/screens/category_screens/category_list_screen/category_card_widget.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
-import 'package:bona_blog/utils/widgets/sliver_widgets/static_sliver_app_widget.dart';
+import 'package:bona_blog/widgets/sliver_widgets/static_sliver_app_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
@@ -27,10 +27,8 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
       body: CustomScrollView(
         physics: BouncingScrollPhysics(),
         slivers: <Widget>[
-          staticSliverAppBar(
-              context: context,
-              title: "Categories",
-              assetImage: "assets/images/food.jpg"),
+          StaticSliverAppBar(
+              title: "Categories", assetImage: "assets/images/food.jpg"),
           SliverGrid(
               delegate: SliverChildBuilderDelegate(
                   (BuildContext context, int categoryIndex) {
