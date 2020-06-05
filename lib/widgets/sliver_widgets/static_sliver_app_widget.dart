@@ -1,3 +1,4 @@
+import 'package:bona_blog/widgets/sliver_widgets/static_flexible_space_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 class StaticSliverAppBar extends StatelessWidget {
@@ -16,7 +17,7 @@ class StaticSliverAppBar extends StatelessWidget {
         expandedHeight: 200,
         elevation: 0.0,
         backgroundColor: Theme.of(context).primaryColor,
-        flexibleSpace: StaticSliverAppBar(
+        flexibleSpace: StaticFlexibleSpaceBar(
             title: title,
             assetImage: assetImage,
             networkImageUrl: networkImageUrl));
