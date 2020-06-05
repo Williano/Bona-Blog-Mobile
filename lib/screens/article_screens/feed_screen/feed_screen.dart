@@ -1,10 +1,10 @@
 import 'package:bona_blog/models/article_models/article_model.dart';
 import 'package:bona_blog/models/category_models/category_model.dart';
-import 'package:bona_blog/screens/article_screens/feed_screen/category_card_widget.dart';
-import 'package:bona_blog/screens/article_screens/feed_screen/custom_title_widget.dart';
+import 'package:bona_blog/screens/article_screens/feed_screen/feed_category_card_widget.dart';
 import 'package:bona_blog/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 import 'package:bona_blog/widgets/card_widgets/article_card_widget.dart';
+import 'package:bona_blog/widgets/custom_title_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
@@ -117,7 +117,7 @@ class _FeedScreenState extends State<FeedScreen> {
               ),
               settings: RouteSettings(name: CategoryArticlesListRoute));
         },
-        child: CategoryCard(
+        child: FeedCategoryCard(
             categories: _categories, categoryIndex: categoryIndex));
   }
 }

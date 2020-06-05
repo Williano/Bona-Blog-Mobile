@@ -1,15 +1,14 @@
 import 'package:bona_blog/models/category_models/category_model.dart';
 import 'package:flutter/material.dart';
 
-class CategoryCard extends StatelessWidget {
-  const CategoryCard({
+class FeedCategoryCard extends StatelessWidget {
+  const FeedCategoryCard({
     Key key,
-    @required List<ArticleCategory> categories,
+    @required this.categories,
     @required this.categoryIndex,
-  })  : _categories = categories,
-        super(key: key);
+  }) : super(key: key);
 
-  final List<ArticleCategory> _categories;
+  final List<ArticleCategory> categories;
   final int categoryIndex;
 
   @override
@@ -24,7 +23,7 @@ class CategoryCard extends StatelessWidget {
             child: Image(
               height: 120.0,
               width: 120.0,
-              image: AssetImage("${_categories[categoryIndex].imageURL}"),
+              image: AssetImage("${categories[categoryIndex].imageURL}"),
               fit: BoxFit.fill,
             ),
           ),
@@ -42,7 +41,7 @@ class CategoryCard extends StatelessWidget {
             bottom: 20.0,
             child: Center(
               child: Text(
-                "${_categories[categoryIndex].name}",
+                "${categories[categoryIndex].name}",
                 textAlign: TextAlign.center,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
