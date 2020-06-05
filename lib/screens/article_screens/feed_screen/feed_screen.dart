@@ -15,13 +15,13 @@ class FeedScreen extends StatefulWidget {
 }
 
 class _FeedScreenState extends State<FeedScreen> {
-  List<Article> _articles;
-  List<ArticleCategory> _categories;
+  List<ArticleModel> _articles;
+  List<ArticleCategoryModel> _categories;
 
   @override
   void initState() {
-    _categories = ArticleCategory.getAllCategories();
-    _articles = Article.getAllArticles();
+    _categories = ArticleCategoryModel.getAllCategories();
+    _articles = ArticleModel.getAllArticles();
     super.initState();
   }
 

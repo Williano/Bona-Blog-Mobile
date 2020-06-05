@@ -1,4 +1,4 @@
-class Article {
+class ArticleModel {
   final int articleId;
   final String author;
   final String title;
@@ -12,7 +12,7 @@ class Article {
   final String timePublishedOn;
   final String timeUpdatedOn;
 
-  Article(
+  ArticleModel(
       {this.articleId,
       this.author,
       this.title,
@@ -40,8 +40,8 @@ class Article {
   @override
   String toString() => "$title";
 
-  static List<Article> getAllArticles() => <Article>[
-        Article(
+  static List<ArticleModel> getAllArticles() => <ArticleModel>[
+        ArticleModel(
             author: "Williano",
             title:
                 "Sports is the Best1 Sports is the Best1 Sports is the Best1",
@@ -51,7 +51,7 @@ class Article {
             numberOfViews: 5000,
             readTime: 200,
             datePublishedOn: "April 15, 2019"),
-        Article(
+        ArticleModel(
             author: "Williano Williano",
             title:
                 "Software is the Best1 Sports is the Best1 Sports is the Best1 ",
@@ -61,7 +61,7 @@ class Article {
             numberOfViews: 5000,
             readTime: 200,
             datePublishedOn: "May 15, 2019"),
-        Article(
+        ArticleModel(
             author: "William Kwabla",
             title: "Art is the Best1",
             imageURL: "assets/images/art.jpg",
@@ -70,7 +70,7 @@ class Article {
             numberOfViews: 5000,
             readTime: 200,
             datePublishedOn: "Jan 15, 2019"),
-        Article(
+        ArticleModel(
             author: "Bill",
             title: "Food is the Best1",
             imageURL: "assets/images/food.jpg",
@@ -79,7 +79,7 @@ class Article {
             numberOfViews: 5000,
             readTime: 200,
             datePublishedOn: "Feb 15, 2020"),
-        Article(
+        ArticleModel(
             author: "Seema",
             title: "Design is the Best1",
             imageURL: "assets/images/design.jpg",
@@ -88,7 +88,7 @@ class Article {
             numberOfViews: 5000,
             readTime: 200,
             datePublishedOn: "April 15, 2019"),
-        Article(
+        ArticleModel(
             author: "Khalil",
             title: "Education is the Best1",
             imageURL: "assets/images/education.jpg",
@@ -97,7 +97,7 @@ class Article {
             numberOfViews: 5000,
             readTime: 200,
             datePublishedOn: "April 15, 2019"),
-        Article(
+        ArticleModel(
             author: "Dr. Tansel Halic",
             title: "Entertainment is the Best1",
             imageURL: "assets/images/Entertainment.jpg",
@@ -106,7 +106,7 @@ class Article {
             numberOfViews: 5000,
             readTime: 200,
             datePublishedOn: "April 15, 2019"),
-        Article(
+        ArticleModel(
             author: "Adiza Rasheed",
             title: "Programming is the Best1",
             imageURL: "assets/images/programming.jpg",
@@ -115,7 +115,7 @@ class Article {
             numberOfViews: 5000,
             readTime: 200,
             datePublishedOn: "April 15, 2019"),
-        Article(
+        ArticleModel(
             author: "Kwabena Yeboah",
             title: "Sports is the Best1",
             imageURL: "assets/images/error.jpg",
@@ -124,7 +124,7 @@ class Article {
             numberOfViews: 5000,
             readTime: 200,
             datePublishedOn: "April 15, 2019"),
-        Article(
+        ArticleModel(
             author: "Oliver Boamah",
             title: "Bugs is the Best1",
             imageURL: "assets/images/error4.jpg",

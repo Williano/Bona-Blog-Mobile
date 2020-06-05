@@ -13,12 +13,12 @@ class CategoryListScreen extends StatefulWidget {
 }
 
 class _CategoryListScreenState extends State<CategoryListScreen> {
-  List<ArticleCategory> _categories;
+  List<ArticleCategoryModel> _categories;
 
   @override
   void initState() {
     super.initState();
-    _categories = ArticleCategory.getAllCategories();
+    _categories = ArticleCategoryModel.getAllCategories();
   }
 
   @override
