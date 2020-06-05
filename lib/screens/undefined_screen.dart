@@ -1,4 +1,4 @@
-import 'package:bona_blog/ui/screens/article_screens/feed_screen/feed_screen.dart';
+import 'package:bona_blog/screens/article_screens/feed_screen/feed_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 

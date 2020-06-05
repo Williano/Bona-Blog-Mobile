@@ -1,17 +1,15 @@
-import 'package:bona_blog/data/models/category_models/category_model.dart';
+import 'package:bona_blog/models/category_models/category_model.dart';
 import 'package:flutter/material.dart';
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({
     Key key,
     @required List<ArticleCategory> categories,
-    @required this.context,
     @required this.categoryIndex,
   })  : _categories = categories,
         super(key: key);
 
   final List<ArticleCategory> _categories;
-  final BuildContext context;
   final int categoryIndex;
 
   @override

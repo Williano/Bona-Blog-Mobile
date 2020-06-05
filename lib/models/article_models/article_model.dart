@@ -1,5 +1,3 @@
-import 'package:meta/meta.dart';
-
 class Article {
   final int articleId;
   final String author;

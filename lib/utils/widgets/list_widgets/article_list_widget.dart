@@ -11,8 +11,7 @@ Widget articleListView(
             onTap: () {
               print("Tab");
             },
-            child: articleCard(
-                context: context,
+            child: ArticleCard(
                 articleAuthor: articles[articleIndex].author,
                 articleTitle: articles[articleIndex].title,
                 articleCategory: articles[articleIndex].category,

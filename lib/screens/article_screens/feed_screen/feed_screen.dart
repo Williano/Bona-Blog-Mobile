@@ -1,11 +1,11 @@
-import 'package:bona_blog/data/models/article_models/article_model.dart';
-import 'package:bona_blog/data/models/category_models/category_model.dart';
-import 'package:bona_blog/ui/screens/article_screens/feed_screen/category_card_widget.dart';
-import 'package:bona_blog/ui/screens/article_screens/feed_screen/custom_title_widget.dart';
-import 'package:bona_blog/ui/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
+import 'package:bona_blog/models/article_models/article_model.dart';
+import 'package:bona_blog/models/category_models/category_model.dart';
+import 'package:bona_blog/screens/article_screens/feed_screen/category_card_widget.dart';
+import 'package:bona_blog/screens/article_screens/feed_screen/custom_title_widget.dart';
+import 'package:bona_blog/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 import 'package:bona_blog/utils/widgets/app_bar_widgets/custom_app_bar_widget.dart';
-import 'package:bona_blog/utils/widgets/list_widgets/article_list_widget.dart';
+import 'package:bona_blog/utils/widgets/card_widgets/article_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
@@ -46,7 +46,15 @@ class _FeedScreenState extends State<FeedScreen> {
             Container(
                 height: 130.0,
                 // color: Theme.of(context).backgroundColor,
-                child: _horizontalCategoriesListBuilder(context: context)),
+                child: ListView.builder(
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    itemCount: _categories.length,
+                    physics: BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (BuildContext context, int categoryIndex) {
+                      return _onCategoryTapped(
+                          context: context, categoryIndex: categoryIndex);
+                    })),
             SizedBox(
               height: 30.0,
             ),
@@ -59,24 +67,30 @@ class _FeedScreenState extends State<FeedScreen> {
               ),
             ),
             Expanded(
-              child: articleListView(context: context, articles: _articles),
+              child: ListView.builder(
+                  physics: BouncingScrollPhysics(),
+                  itemCount: _articles.length,
+                  itemBuilder: (BuildContext context, int articleIndex) {
+                    return GestureDetector(
+                        onTap: () {
+                          print("Tab");
+                        },
+                        child: ArticleCard(
+                            articleAuthor: _articles[articleIndex].author,
+                            articleTitle: _articles[articleIndex].title,
+                            articleCategory: _articles[articleIndex].category,
+                            articleImageUrl: _articles[articleIndex].imageURL,
+                            articleDatePublishedOn:
+                                _articles[articleIndex].datePublishedOn,
+                            articleReadTime: _articles[articleIndex].readTime,
+                            articleNumberOfViews:
+                                _articles[articleIndex].numberOfViews));
+                  }),
             )
           ],
         ),
       ),
     );
-  }
-
-  Widget _horizontalCategoriesListBuilder({@required BuildContext context}) {
-    return ListView.builder(
-        padding: const EdgeInsets.symmetric(horizontal: 10.0),
-        itemCount: _categories.length,
-        physics: BouncingScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        itemBuilder: (BuildContext context, int categoryIndex) {
-          return _onCategoryTapped(
-              context: context, categoryIndex: categoryIndex);
-        });
   }
 
   Widget _onCategoryTapped({BuildContext context, int categoryIndex}) {
@@ -95,8 +109,6 @@ class _FeedScreenState extends State<FeedScreen> {
               settings: RouteSettings(name: CategoryArticlesListRoute));
         },
         child: CategoryCard(
-            categories: _categories,
-            context: context,
-            categoryIndex: categoryIndex));
+            categories: _categories, categoryIndex: categoryIndex));
   }
 }
