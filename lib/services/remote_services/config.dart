@@ -1,2 +1,4 @@
 const String localApiBaseURL = "";
-const String apiBaseURL = "";
+const String remoteApiBaseURL = "";
+
+const Map<String, String> headers = {"Content-Type": "application/json"};
