@@ -1,56 +1,56 @@
-part of 'article_bloc_bloc.dart';
+part of 'article_bloc.dart';
 
 abstract class ArticleEvent extends Equatable {
   const ArticleEvent();
 }
 
-class GetArticles extends ArticleEvent {
+class GetArticlesEvent extends ArticleEvent {
   @override
   List<Object> get props => [];
 }
 
-class GetArticleDetail extends ArticleEvent {
+class GetArticleDetailEvent extends ArticleEvent {
   final int articleId;
 
-  const GetArticleDetail({@required this.articleId});
+  const GetArticleDetailEvent({@required this.articleId});
 
   @override
   List<Object> get props => [articleId];
 }
 
-class CreateArticle extends ArticleEvent {
+class CreateArticleEvent extends ArticleEvent {
   final Map articleData;
 
-  const CreateArticle({@required this.articleData});
+  const CreateArticleEvent({@required this.articleData});
 
   @override
   List<Object> get props => [articleData];
 }
 
-class UpdateArticle extends ArticleEvent {
+class UpdateArticleEvent extends ArticleEvent {
   final int articleId;
   final Map newArticleData;
 
-  const UpdateArticle({@required this.articleId, this.newArticleData});
+  const UpdateArticleEvent({@required this.articleId, this.newArticleData});
 
   @override
   List<Object> get props => [articleId, newArticleData];
 }
 
-class DeleteArticle extends ArticleEvent {
+class DeleteArticleEvent extends ArticleEvent {
   final int articleId;
 
-  const DeleteArticle({@required this.articleId});
+  const DeleteArticleEvent({@required this.articleId});
 
   @override
   List<Object> get props => [articleId];
 }
 
-class BookmarkArticle extends ArticleEvent {
+class BookmarkArticleEvent extends ArticleEvent {
   final int articleId;
   final String username;
 
-  const BookmarkArticle({@required this.articleId, this.username});
+  const BookmarkArticleEvent({@required this.articleId, this.username});
 
   @override
   List<Object> get props => [articleId, username];

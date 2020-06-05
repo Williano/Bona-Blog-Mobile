@@ -14,7 +14,7 @@ class ArticleRepository implements BonaBlogBaseRepository {
       @required this.articleRemoteApiClient,
       this.articleLocalApiClient});
 
-  Future<ArticleModel> createArticle(Map articleData) async {
+  Future<ArticleModel> createArticle({Map articleData}) async {
     if (await connectionChecker.hasConnection) {
       final newArticle =
           await articleRemoteApiClient.createArticle(articleData: articleData);
@@ -35,7 +35,7 @@ class ArticleRepository implements BonaBlogBaseRepository {
     }
   }
 
-  Future<ArticleModel> getArticleDetail(int articleId) async {
+  Future<ArticleModel> getArticleDetail({int articleId}) async {
     if (await connectionChecker.hasConnection) {
       final articleDetail =
           await articleRemoteApiClient.getArticleDetail(articleId: articleId);
@@ -46,7 +46,7 @@ class ArticleRepository implements BonaBlogBaseRepository {
     }
   }
 
-  Future<List<ArticleModel>> deleteArticle(int articleId) async {
+  Future<List<ArticleModel>> deleteArticle({int articleId}) async {
     if (await connectionChecker.hasConnection) {
       final articleList =
           await articleRemoteApiClient.deleteArticle(articleId: articleId);
@@ -57,7 +57,8 @@ class ArticleRepository implements BonaBlogBaseRepository {
     }
   }
 
-  Future<ArticleModel> updateArticle(int articleId, Map newArticleData) async {
+  Future<ArticleModel> updateArticle(
+      {int articleId, Map newArticleData}) async {
     if (await connectionChecker.hasConnection) {
       final articleDetail = await articleRemoteApiClient.updateArticle(
           articleId: articleId, newArticleData: newArticleData);
@@ -68,7 +69,7 @@ class ArticleRepository implements BonaBlogBaseRepository {
     }
   }
 
-  Future<String> bookmarkArticle(int articleId, String username) async {
+  Future<String> bookmarkArticle({int articleId, String username}) async {
     if (await connectionChecker.hasConnection) {
       final message = await articleRemoteApiClient.bookmarkArticle(
           articleId: articleId, username: username);

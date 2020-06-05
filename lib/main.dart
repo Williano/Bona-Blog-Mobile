@@ -1,12 +1,17 @@
+import 'package:bona_blog/data/blocs/simple_bloc_delegate.dart';
 import 'package:bona_blog/routes/router.dart';
 import 'package:bona_blog/screens/home_screen.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 // import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
+  BlocSupervisor.delegate = SimpleBlocDelegate();
+
   SystemChrome.setPreferredOrientations(
           [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
       .then((_) => runApp(BonaBlog()));
