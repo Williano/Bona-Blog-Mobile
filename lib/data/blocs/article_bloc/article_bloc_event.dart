@@ -1,15 +1,15 @@
 part of 'article_bloc_bloc.dart';
 
-abstract class ArticleBlocEvent extends Equatable {
-  const ArticleBlocEvent();
+abstract class ArticleEvent extends Equatable {
+  const ArticleEvent();
 }
 
-class GetArticles extends ArticleBlocEvent {
+class GetArticles extends ArticleEvent {
   @override
   List<Object> get props => [];
 }
 
-class GetArticleDetail extends ArticleBlocEvent {
+class GetArticleDetail extends ArticleEvent {
   final int articleId;
 
   const GetArticleDetail({@required this.articleId});
@@ -18,7 +18,7 @@ class GetArticleDetail extends ArticleBlocEvent {
   List<Object> get props => [articleId];
 }
 
-class CreateArticle extends ArticleBlocEvent {
+class CreateArticle extends ArticleEvent {
   final Map articleData;
 
   const CreateArticle({@required this.articleData});
@@ -27,7 +27,7 @@ class CreateArticle extends ArticleBlocEvent {
   List<Object> get props => [articleData];
 }
 
-class UpdateArticle extends ArticleBlocEvent {
+class UpdateArticle extends ArticleEvent {
   final int articleId;
   final Map newArticleData;
 
@@ -37,7 +37,7 @@ class UpdateArticle extends ArticleBlocEvent {
   List<Object> get props => [articleId, newArticleData];
 }
 
-class DeleteArticle extends ArticleBlocEvent {
+class DeleteArticle extends ArticleEvent {
   final int articleId;
 
   const DeleteArticle({@required this.articleId});
@@ -46,7 +46,7 @@ class DeleteArticle extends ArticleBlocEvent {
   List<Object> get props => [articleId];
 }
 
-class BookmarkArticle extends ArticleBlocEvent {
+class BookmarkArticle extends ArticleEvent {
   final int articleId;
   final String username;
 

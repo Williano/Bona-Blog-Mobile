@@ -7,12 +7,12 @@ import 'package:equatable/equatable.dart';
 part 'article_bloc_event.dart';
 part 'article_bloc_state.dart';
 
-class ArticleBlocBloc extends Bloc<ArticleBlocEvent, ArticleBlocState> {
+class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
   @override
-  ArticleBlocState get initialState => ArticleBlocInitial();
+  ArticleState get initialState => ArticleEmpty();
 
   @override
-  Stream<ArticleBlocState> mapEventToState(
-    ArticleBlocEvent event,
+  Stream<ArticleState> mapEventToState(
+    ArticleEvent event,
   ) async* {}
 }
