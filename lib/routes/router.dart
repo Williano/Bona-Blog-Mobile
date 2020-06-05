@@ -1,8 +1,8 @@
-import 'package:bona_blog/ui/screens/category/category_articles_list_screen/category_articles_list_screen.dart';
-import 'package:bona_blog/ui/screens/category/category_list_screen/category_list_screen.dart';
-import 'package:bona_blog/ui/screens/feed_screen.dart';
-import 'package:bona_blog/ui/screens/home_screen.dart';
-import 'package:bona_blog/ui/screens/undefined_screen.dart';
+import 'package:bona_blog/screens/article_screens/feed_screen/feed_screen.dart';
+import 'package:bona_blog/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
+import 'package:bona_blog/screens/category_screens/category_list_screen/category_list_screen.dart';
+import 'package:bona_blog/screens/home_screen.dart';
+import 'package:bona_blog/screens/undefined_screen.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,11 +14,17 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
           builder: (BuildContext context) => HomeScreen());
       break;
 
+    ///
+    /// Articles Routes
+    ///
     case FeedScreenRoute:
       return CupertinoPageRoute(
           builder: (BuildContext context) => FeedScreen());
       break;
 
+    /// Categories Routes
+    ///
+    ///
     case CategoriesScreenRoute:
       return CupertinoPageRoute(
           builder: (BuildContext context) => CategoryListScreen());
@@ -40,6 +46,9 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
               ));
       break;
 
+    ///
+    /// Error Route
+    ///
     default:
       String name = routeSettings.arguments;
       return CupertinoPageRoute(

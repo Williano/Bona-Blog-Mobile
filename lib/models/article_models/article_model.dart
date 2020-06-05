@@ -1,5 +1,3 @@
-import 'package:meta/meta.dart';
-
 class Article {
   final int articleId;
   final String author;
@@ -27,8 +25,7 @@ class Article {
       this.dateUpdatedOn,
       this.timePublishedOn,
       this.timeUpdatedOn})
-      : assert(articleId != null),
-        assert(author != null),
+      : assert(author != null),
         assert(title != null),
         assert(imageURL != null),
         assert(category != null),

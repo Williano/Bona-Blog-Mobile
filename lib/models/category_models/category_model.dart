@@ -15,8 +15,7 @@ class ArticleCategory {
       this.dateUpdatedOn,
       this.timeCreatedOn,
       this.timeUpdatedOn})
-      : assert(categoryId != null),
-        assert(name != null),
+      : assert(name != null),
         assert(imageURL != null);
   // assert(dateCreatedOn != null),
   // assert(dateUpdatedOn != null),
