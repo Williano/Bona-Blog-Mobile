@@ -5,7 +5,6 @@ import 'package:bona_blog/widgets/custom_title_widget.dart';
 import 'package:bona_blog/widgets/loading_widget/loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 import 'category_display_widget.dart';
 

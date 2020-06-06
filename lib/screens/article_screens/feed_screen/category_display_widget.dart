@@ -1,9 +1,7 @@
 import 'package:bona_blog/models/category_models/category_model.dart';
 import 'package:bona_blog/screens/article_screens/feed_screen/feed_category_card_widget.dart';
-import 'package:bona_blog/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.widget.dart';
 
 class DisplayCategoriesWidget extends StatelessWidget {
   final List<ArticleCategoryModel> categories;
@@ -27,13 +25,8 @@ class DisplayCategoriesWidget extends StatelessWidget {
                   "categoryName": categories[categoryIndex].name,
                   "categoryImageURL": categories[categoryIndex].imageURL,
                 };
-
-                pushNewScreenWithRouteSettings(context,
-                    screen: CateoryArticlesListScreen(
-                      categoryName: data["categoryName"],
-                      categoryImageURL: data["categoryImageURL"],
-                    ),
-                    settings: RouteSettings(name: CategoryArticlesListRoute));
+                Navigator.pushNamed(context, CategoryArticlesListRoute,
+                    arguments: data);
               },
               child: FeedCategoryCard(
                   categories: categories, categoryIndex: categoryIndex));
