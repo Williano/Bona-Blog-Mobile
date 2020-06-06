@@ -1,6 +1,4 @@
 import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
-import 'package:bona_blog/models/category_models/category_model.dart';
-
 import 'package:bona_blog/screens/category_screens/category_list_screen/category_card_widget.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 import 'package:bona_blog/widgets/loading_widget/loading_widget.dart';
@@ -18,7 +16,6 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
   @override
   void initState() {
     final categoryBloc = BlocProvider.of<CategoryBloc>(context);
-
     categoryBloc.add(GetCategoriesEvent());
 
     super.initState();
@@ -27,64 +24,65 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(
-        physics: BouncingScrollPhysics(),
-        slivers: <Widget>[
-          StaticSliverAppBar(
-              title: "Categories", assetImage: "assets/images/food.jpg"),
-          BlocBuilder<CategoryBloc, CategoryState>(
-            builder: (context, state) {
-              if (state is CategoryEmpty) {
-                return LoadingWidget();
-              } else if (state is CategoriesLoaded) {
-                if (state.categories.isEmpty) {
-                  return Center(child: Text('No Categories'));
-                }
-                return CategorySliverGridDisplay(
-                  key: PageStorageKey("categories grid list"),
-                  categories: state.categories,
-                );
-              } else if (state is CategoryError) {
-                return LoadingWidget();
-              }
-            },
-          )
-        ],
+      body: BlocBuilder<CategoryBloc, CategoryState>(
+        builder: (context, state) {
+          if (state is CategoryEmpty) {
+            return LoadingWidget();
+          } else if (state is CategoriesLoaded) {
+            if (state.categories.isEmpty) {
+              return Center(child: Text('No Categories'));
+            }
+            return DisplayCategoriesWidget(
+              key: PageStorageKey("categories grid list"),
+              categories: state.categories,
+            );
+          } else if (state is CategoryError) {
+            return LoadingWidget();
+          }
+        },
       ),
     );
   }
 }
 
-class CategorySliverGridDisplay extends StatelessWidget {
-  const CategorySliverGridDisplay({
+class DisplayCategoriesWidget extends StatelessWidget {
+  const DisplayCategoriesWidget({
     Key key,
     @required this.categories,
   }) : super(key: key);
 
-  final List<ArticleCategoryModel> categories;
+  final List categories;
 
   @override
   Widget build(BuildContext context) {
-    return SliverGrid(
-        delegate: SliverChildBuilderDelegate(
-            (BuildContext context, int categoryIndex) {
-          return GestureDetector(
-              onTap: () {
-                Map<String, dynamic> data = {
-                  "categoryName": categories[categoryIndex].name,
-                  "categoryImageURL": categories[categoryIndex].imageURL,
-                };
-                Navigator.pushNamed(context, CategoryArticlesListRoute,
-                    arguments: data);
-              },
-              child: Padding(
-                padding:
-                    const EdgeInsets.only(top: 10.0, left: 5.0, right: 5.0),
-                child: CategoryCard(
-                    categories: categories, categoryIndex: categoryIndex),
-              ));
-        }, childCount: categories.length),
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2));
+    return CustomScrollView(
+      physics: BouncingScrollPhysics(),
+      slivers: <Widget>[
+        StaticSliverAppBar(
+            title: "Categories", assetImage: "assets/images/food.jpg"),
+        SliverGrid(
+            delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int categoryIndex) {
+              return GestureDetector(
+                  onTap: () {
+                    Map<String, dynamic> data = {
+                      "categoryName": categories[categoryIndex].name,
+                      "categoryImageURL": categories[categoryIndex].imageURL,
+                    };
+
+                    Navigator.pushNamed(context, CategoryArticlesListRoute,
+                        arguments: data);
+                  },
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.only(top: 10.0, left: 5.0, right: 5.0),
+                    child: CategoryCard(
+                        categories: categories, categoryIndex: categoryIndex),
+                  ));
+            }, childCount: categories.length),
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2))
+      ],
+    );
   }
 }
