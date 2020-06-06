@@ -59,16 +59,20 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    _controller = PersistentTabController(initialIndex: 2);
+    _controller = PersistentTabController(initialIndex: 1);
   }
 
   List<Widget> _buildScreens() {
     return [
-      CategoryListScreen(),
-      UndefinedScreen(),
-      FeedScreen(),
-      FeedScreen(),
-      FeedScreen(),
+      CategoryListScreen(
+        key: PageStorageKey("List"),
+      ),
+      UndefinedScreen(
+        key: PageStorageKey("Undefined"),
+      ),
+      FeedScreen(key: PageStorageKey("Feed1")),
+      FeedScreen(key: PageStorageKey("Feed2")),
+      FeedScreen(key: PageStorageKey("Feed3")),
     ];
   }
 

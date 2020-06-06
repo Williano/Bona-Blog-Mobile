@@ -1,4 +1,5 @@
 import 'package:bona_blog/data/blocs/article_bloc/article_bloc.dart';
+import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
 import 'package:bona_blog/data/blocs/simple_bloc_delegate.dart';
 import 'package:bona_blog/injection_container.dart';
 import 'package:bona_blog/routes/router.dart';
@@ -62,9 +63,12 @@ class BonaBlog extends StatelessWidget {
         //backgroundColor: Color(0xFFEDF3F3),
       ),
       home: MultiBlocProvider(providers: [
+        BlocProvider<CategoryBloc>(
+          create: (context) => servicelocator<CategoryBloc>(),
+        ),
         BlocProvider<ArticleBloc>(
           create: (context) => servicelocator<ArticleBloc>(),
-        )
+        ),
       ], child: HomeScreen()),
     );
   }

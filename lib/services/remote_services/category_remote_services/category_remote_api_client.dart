@@ -24,7 +24,7 @@ class CategoryApiClient {
 
     // final articlesJson = jsonDecode(apiResponse.body);
     // await Future.delayed(Duration(seconds: 4));
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 3));
     return dummyGetAllCategories();
   }
 
