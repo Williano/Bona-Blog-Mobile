@@ -8,7 +8,7 @@ class CategoryCard extends StatefulWidget {
     @required this.categoryIndex,
   }) : super(key: key);
 
-  final List<ArticleCategory> categories;
+  final List<ArticleCategoryModel> categories;
   final int categoryIndex;
 
   @override

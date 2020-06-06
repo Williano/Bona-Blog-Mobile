@@ -8,7 +8,7 @@ class FeedCategoryCard extends StatelessWidget {
     @required this.categoryIndex,
   }) : super(key: key);
 
-  final List<ArticleCategory> categories;
+  final List<ArticleCategoryModel> categories;
   final int categoryIndex;
 
   @override

@@ -18,7 +18,7 @@ class CateoryArticlesListScreen extends StatefulWidget {
 
 class _CateoryArticlesListScreenState extends State<CateoryArticlesListScreen> {
   Map<String, dynamic> _categoryData;
-  List<Article> _articles;
+  List<ArticleModel> _articles;
 
   @override
   void initState() {
@@ -26,7 +26,7 @@ class _CateoryArticlesListScreenState extends State<CateoryArticlesListScreen> {
       "categoryName": widget.categoryName,
       "categoryImageURL": widget.categoryImageURL
     };
-    _articles = Article.getAllArticles();
+    _articles = ArticleModel.getAllArticles();
     super.initState();
   }
 

@@ -1,4 +1,4 @@
-class ArticleCategory {
+class ArticleCategoryModel {
   final String categoryId;
   final String name;
   final String imageURL;
@@ -7,7 +7,7 @@ class ArticleCategory {
   final String timeCreatedOn;
   final String timeUpdatedOn;
 
-  ArticleCategory(
+  ArticleCategoryModel(
       {this.categoryId,
       this.name,
       this.imageURL,
@@ -25,68 +25,68 @@ class ArticleCategory {
   @override
   String toString() => "$name";
 
-  static List<ArticleCategory> getAllCategories() => [
-        ArticleCategory(
+  static List<ArticleCategoryModel> getAllCategories() => [
+        ArticleCategoryModel(
           name: "Sports",
           imageURL: "assets/images/SPORTS.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Art",
           imageURL: "assets/images/art.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Politics",
           imageURL: "assets/images/politics.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Entertainment",
           imageURL: "assets/images/Entertainment.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Programming",
           imageURL: "assets/images/programming.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Food",
           imageURL: "assets/images/food.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Software Engineering ",
           imageURL: "assets/images/se.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Design",
           imageURL: "assets/images/design.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Sports",
           imageURL: "assets/images/SPORTS.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Art",
           imageURL: "assets/images/art.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Politics",
           imageURL: "assets/images/politics.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Entertainment",
           imageURL: "assets/images/Entertainment.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Programming",
           imageURL: "assets/images/programming.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Food",
           imageURL: "assets/images/food.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Software Engineering",
           imageURL: "assets/images/se.jpg",
         ),
-        ArticleCategory(
+        ArticleCategoryModel(
           name: "Design",
           imageURL: "assets/images/design.jpg",
         ),

@@ -1,12 +1,23 @@
+import 'package:bona_blog/data/blocs/article_bloc/article_bloc.dart';
+import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
+import 'package:bona_blog/data/blocs/simple_bloc_delegate.dart';
+import 'package:bona_blog/injection_container.dart';
 import 'package:bona_blog/routes/router.dart';
 import 'package:bona_blog/screens/home_screen.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
+import 'injection_container.dart' as dependencyInjection;
 // import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await dependencyInjection.init();
+
+  BlocSupervisor.delegate = SimpleBlocDelegate();
+
   SystemChrome.setPreferredOrientations(
           [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown])
       .then((_) => runApp(BonaBlog()));
@@ -51,7 +62,14 @@ class BonaBlog extends StatelessWidget {
         ),
         //backgroundColor: Color(0xFFEDF3F3),
       ),
-      home: HomeScreen(),
+      home: MultiBlocProvider(providers: [
+        BlocProvider<CategoryBloc>(
+          create: (context) => servicelocator<CategoryBloc>(),
+        ),
+        BlocProvider<ArticleBloc>(
+          create: (context) => servicelocator<ArticleBloc>(),
+        ),
+      ], child: HomeScreen()),
     );
   }
 }
