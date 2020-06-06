@@ -37,7 +37,7 @@ class CategoryApiClient {
     //   throw Exception('error getting article detail!');
     // }
 
-    final articleJson = jsonDecode(apiResponse.body);
+    // final articleJson = jsonDecode(apiResponse.body);
     return dummyGetAllArticles();
   }
 }
