@@ -1,8 +1,11 @@
+import 'package:bona_blog/data/blocs/article_bloc/article_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ArticleCard extends StatefulWidget {
+  final int articleId;
   final String articleAuthor;
   final String articleTitle;
   final String articleCategory;
@@ -13,6 +16,7 @@ class ArticleCard extends StatefulWidget {
 
   const ArticleCard(
       {Key key,
+      @required this.articleId,
       @required this.articleAuthor,
       @required this.articleTitle,
       @required this.articleCategory,
@@ -29,6 +33,7 @@ class ArticleCard extends StatefulWidget {
 class _ArticleCardState extends State<ArticleCard> {
   @override
   Widget build(BuildContext context) {
+    int articleId = widget.articleId;
     String articleAuthor = widget.articleAuthor;
     String articleTitle = widget.articleTitle;
     String articleCategory = widget.articleCategory;
@@ -165,7 +170,10 @@ class _ArticleCardState extends State<ArticleCard> {
                                 Row(children: <Widget>[
                                   GestureDetector(
                                     onTap: () {
-                                      print(articleTitle + "bookmarked");
+                                      final articleBloc =
+                                          BlocProvider.of<ArticleBloc>(context);
+                                      articleBloc.add(BookmarkArticleEvent(
+                                          articleId: articleId));
                                     },
                                     child: FaIcon(
                                       FontAwesomeIcons.bookmark,
