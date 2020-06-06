@@ -29,13 +29,13 @@ class CategoryApiClient {
   }
 
   Future<dynamic> getCategoryArticles({int categoryId}) async {
-    final categoryArticlesUrl = "$baseUrl/$categoryId";
-    final http.Response apiResponse =
-        await this.httpClient.get(categoryArticlesUrl, headers: headers);
+    // final categoryArticlesUrl = "$baseUrl/$categoryId";
+    // final http.Response apiResponse =
+    //     await this.httpClient.get(categoryArticlesUrl, headers: headers);
 
-    if (apiResponse.statusCode != 200) {
-      throw Exception('error getting article detail!');
-    }
+    // if (apiResponse.statusCode != 200) {
+    //   throw Exception('error getting article detail!');
+    // }
 
     final articleJson = jsonDecode(apiResponse.body);
     return dummyGetAllArticles();
