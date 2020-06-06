@@ -7,6 +7,12 @@ abstract class ArticleEvent extends Equatable {
 class GetArticlesEvent extends ArticleEvent {
   @override
   List<Object> get props => [];
+
+  @override
+  String toString() {
+    String status = "Articles retrieved";
+    return status;
+  }
 }
 
 class GetArticleDetailEvent extends ArticleEvent {
@@ -16,6 +22,12 @@ class GetArticleDetailEvent extends ArticleEvent {
 
   @override
   List<Object> get props => [articleId];
+
+  @override
+  String toString() {
+    String status = "Article Detailed retrieved";
+    return status;
+  }
 }
 
 class CreateArticleEvent extends ArticleEvent {
@@ -25,6 +37,12 @@ class CreateArticleEvent extends ArticleEvent {
 
   @override
   List<Object> get props => [articleData];
+
+  @override
+  String toString() {
+    String status = "Article Created";
+    return status;
+  }
 }
 
 class UpdateArticleEvent extends ArticleEvent {
@@ -35,6 +53,12 @@ class UpdateArticleEvent extends ArticleEvent {
 
   @override
   List<Object> get props => [articleId, newArticleData];
+
+  @override
+  String toString() {
+    String status = "Article Updated";
+    return status;
+  }
 }
 
 class DeleteArticleEvent extends ArticleEvent {
@@ -44,6 +68,12 @@ class DeleteArticleEvent extends ArticleEvent {
 
   @override
   List<Object> get props => [articleId];
+
+  @override
+  String toString() {
+    String status = "Article Deleted";
+    return status;
+  }
 }
 
 class BookmarkArticleEvent extends ArticleEvent {
@@ -54,4 +84,10 @@ class BookmarkArticleEvent extends ArticleEvent {
 
   @override
   List<Object> get props => [articleId, username];
+
+  @override
+  String toString() {
+    String status = "Article Bookmarked";
+    return status;
+  }
 }

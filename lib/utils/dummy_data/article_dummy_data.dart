@@ -1,7 +1,8 @@
 import 'package:bona_blog/models/article_models/article_model.dart';
 
-List<ArticleModel> getAllArticles() => <ArticleModel>[
+List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
       ArticleModel(
+          articleId: 1,
           author: "Williano",
           title: "Sports is the Best1 Sports is the Best1 Sports is the Best1",
           imageURL: "assets/images/error.jpg",
@@ -11,6 +12,7 @@ List<ArticleModel> getAllArticles() => <ArticleModel>[
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
       ArticleModel(
+          articleId: 2,
           author: "Williano Williano",
           title:
               "Software is the Best1 Sports is the Best1 Sports is the Best1 ",
@@ -21,6 +23,7 @@ List<ArticleModel> getAllArticles() => <ArticleModel>[
           readTime: 200,
           datePublishedOn: "May 15, 2019"),
       ArticleModel(
+          articleId: 3,
           author: "William Kwabla",
           title: "Art is the Best1",
           imageURL: "assets/images/art.jpg",
@@ -30,6 +33,7 @@ List<ArticleModel> getAllArticles() => <ArticleModel>[
           readTime: 200,
           datePublishedOn: "Jan 15, 2019"),
       ArticleModel(
+          articleId: 4,
           author: "Bill",
           title: "Food is the Best1",
           imageURL: "assets/images/food.jpg",
@@ -39,6 +43,7 @@ List<ArticleModel> getAllArticles() => <ArticleModel>[
           readTime: 200,
           datePublishedOn: "Feb 15, 2020"),
       ArticleModel(
+          articleId: 5,
           author: "Seema",
           title: "Design is the Best1",
           imageURL: "assets/images/design.jpg",
@@ -48,6 +53,7 @@ List<ArticleModel> getAllArticles() => <ArticleModel>[
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
       ArticleModel(
+          articleId: 6,
           author: "Khalil",
           title: "Education is the Best1",
           imageURL: "assets/images/education.jpg",
@@ -57,6 +63,7 @@ List<ArticleModel> getAllArticles() => <ArticleModel>[
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
       ArticleModel(
+          articleId: 7,
           author: "Dr. Tansel Halic",
           title: "Entertainment is the Best1",
           imageURL: "assets/images/Entertainment.jpg",
@@ -66,6 +73,7 @@ List<ArticleModel> getAllArticles() => <ArticleModel>[
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
       ArticleModel(
+          articleId: 8,
           author: "Adiza Rasheed",
           title: "Programming is the Best1",
           imageURL: "assets/images/programming.jpg",
@@ -75,6 +83,7 @@ List<ArticleModel> getAllArticles() => <ArticleModel>[
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
       ArticleModel(
+          articleId: 9,
           author: "Kwabena Yeboah",
           title: "Sports is the Best1",
           imageURL: "assets/images/error.jpg",
@@ -84,6 +93,7 @@ List<ArticleModel> getAllArticles() => <ArticleModel>[
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
       ArticleModel(
+          articleId: 10,
           author: "Oliver Boamah",
           title: "Bugs is the Best1",
           imageURL: "assets/images/error4.jpg",

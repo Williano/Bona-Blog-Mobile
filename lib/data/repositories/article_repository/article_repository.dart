@@ -28,7 +28,6 @@ class ArticleRepository implements BonaBlogBaseRepository {
   Future<List<ArticleModel>> getAllArticles() async {
     if (await connectionChecker.hasConnection) {
       final articleList = await articleRemoteApiClient.getAllArticles();
-      // insert into local db
       return articleList;
     } else {
       throw Exception('No internet connection');

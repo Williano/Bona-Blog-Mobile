@@ -1,6 +1,6 @@
 import 'package:bona_blog/models/category_models/category_model.dart';
 
-List<ArticleCategoryModel> getAllCategories() => [
+List<ArticleCategoryModel> dummyGetAllCategories() => [
       ArticleCategoryModel(
         name: "Sports",
         imageURL: "assets/images/SPORTS.jpg",

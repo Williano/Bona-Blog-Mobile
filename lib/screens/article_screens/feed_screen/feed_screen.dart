@@ -1,3 +1,4 @@
+import 'package:bona_blog/data/blocs/article_bloc/article_bloc.dart';
 import 'package:bona_blog/models/article_models/article_model.dart';
 import 'package:bona_blog/models/category_models/category_model.dart';
 import 'package:bona_blog/screens/article_screens/feed_screen/feed_category_card_widget.dart';
@@ -5,7 +6,9 @@ import 'package:bona_blog/screens/category_screens/category_articles_list_screen
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 import 'package:bona_blog/widgets/card_widgets/article_card_widget.dart';
 import 'package:bona_blog/widgets/custom_title_widget.dart';
+import 'package:bona_blog/widgets/loading_widget/loading_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class FeedScreen extends StatefulWidget {
@@ -15,13 +18,14 @@ class FeedScreen extends StatefulWidget {
 }
 
 class _FeedScreenState extends State<FeedScreen> {
-  List<ArticleModel> _articles;
   List<ArticleCategoryModel> _categories;
 
   @override
   void initState() {
     _categories = ArticleCategoryModel.getAllCategories();
-    _articles = ArticleModel.getAllArticles();
+    final weatherBloc = BlocProvider.of<ArticleBloc>(context);
+    // Initiate getting the article
+    weatherBloc.add(GetArticlesEvent());
     super.initState();
   }
 
@@ -76,26 +80,52 @@ class _FeedScreenState extends State<FeedScreen> {
               ),
             ),
             Expanded(
-              child: ListView.builder(
-                  physics: BouncingScrollPhysics(),
-                  itemCount: _articles.length,
-                  itemBuilder: (BuildContext context, int articleIndex) {
-                    return GestureDetector(
-                        onTap: () {
-                          print("Tab");
-                        },
-                        child: ArticleCard(
-                            articleAuthor: _articles[articleIndex].author,
-                            articleTitle: _articles[articleIndex].title,
-                            articleCategory: _articles[articleIndex].category,
-                            articleImageUrl: _articles[articleIndex].imageURL,
-                            articleDatePublishedOn:
-                                _articles[articleIndex].datePublishedOn,
-                            articleReadTime: _articles[articleIndex].readTime,
-                            articleNumberOfViews:
-                                _articles[articleIndex].numberOfViews));
-                  }),
-            )
+                child: MultiBlocListener(
+                    listeners: [
+                  BlocListener<ArticleBloc, ArticleState>(
+                    listener: (context, state) {
+                      if (state is ArticleError) {
+                        Scaffold.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(state.errorMessage),
+                          ),
+                        );
+                      }
+                    },
+                  ),
+                  BlocListener<ArticleBloc, ArticleState>(
+                    listener: (context, state) {
+                      if (state is ArticleSuccess) {
+                        Scaffold.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text(state.message),
+                          ),
+                        );
+                      }
+                    },
+                  ),
+                ],
+                    child: BlocBuilder<ArticleBloc, ArticleState>(
+                      builder: (context, state) {
+                        if (state is ArticleEmpty) {
+                          return LoadingWidget();
+                        } else if (state is ArticlesLoaded) {
+                          if (state.articles.isEmpty) {
+                            return Center(child: Text('No Articles'));
+                          }
+                          return DisplayArticlesWidget(
+                            key: PageStorageKey("articles list"),
+                            articles: state.articles,
+                          );
+                        } else if (state is ArticleSuccess) {
+                          return SnackBar(
+                            content: Text("succes"),
+                          );
+                        } else if (state is ArticleError) {
+                          return LoadingWidget();
+                        }
+                      },
+                    )))
           ],
         ),
       ),
@@ -119,5 +149,37 @@ class _FeedScreenState extends State<FeedScreen> {
         },
         child: FeedCategoryCard(
             categories: _categories, categoryIndex: categoryIndex));
+  }
+}
+
+class DisplayArticlesWidget extends StatelessWidget {
+  final List<ArticleModel> articles;
+
+  const DisplayArticlesWidget({
+    Key key,
+    @required this.articles,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+        physics: BouncingScrollPhysics(),
+        itemCount: articles.length,
+        itemBuilder: (BuildContext context, int articleIndex) {
+          return GestureDetector(
+              onTap: () {
+                print("Tap");
+              },
+              child: ArticleCard(
+                  articleId: articles[articleIndex].articleId,
+                  articleAuthor: articles[articleIndex].author,
+                  articleTitle: articles[articleIndex].title,
+                  articleCategory: articles[articleIndex].category,
+                  articleImageUrl: articles[articleIndex].imageURL,
+                  articleDatePublishedOn:
+                      articles[articleIndex].datePublishedOn,
+                  articleReadTime: articles[articleIndex].readTime,
+                  articleNumberOfViews: articles[articleIndex].numberOfViews));
+        });
   }
 }

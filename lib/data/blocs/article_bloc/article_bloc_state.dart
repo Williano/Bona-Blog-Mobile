@@ -42,6 +42,9 @@ class ArticleSuccess extends ArticleState {
 }
 
 class ArticleError extends ArticleState {
+  final String errorMessage;
+  const ArticleError({this.errorMessage});
+
   @override
-  List<Object> get props => [];
+  List<Object> get props => [errorMessage];
 }

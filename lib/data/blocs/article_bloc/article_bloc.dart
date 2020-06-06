@@ -38,13 +38,13 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
 
   Stream<ArticleState> _mapGetArticlesEventToState(
       GetArticlesEvent event) async* {
-    yield ArticleLoading();
     try {
       final List<ArticleModel> articles =
           await articleRepository.getAllArticles();
       yield ArticlesLoaded(articles: articles);
     } catch (_) {
-      yield ArticleError();
+      yield ArticleError(
+          errorMessage: "Couldn't get articles. Is the device online?");
     }
   }
 
@@ -56,7 +56,8 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
           await articleRepository.getArticleDetail(articleId: event.articleId);
       yield ArticleLoaded(article: article);
     } catch (_) {
-      yield ArticleError();
+      yield ArticleError(
+          errorMessage: "Couldn't get article. Is the device online?");
     }
   }
 
@@ -68,7 +69,8 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
           await articleRepository.createArticle(articleData: event.articleData);
       yield ArticleLoaded(article: article);
     } catch (_) {
-      yield ArticleError();
+      yield ArticleError(
+          errorMessage: "Couldn't create article. Is the device online?");
     }
   }
 
@@ -80,7 +82,8 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
           articleId: event.articleId, newArticleData: event.newArticleData);
       yield ArticleLoaded(article: article);
     } catch (_) {
-      yield ArticleError();
+      yield ArticleError(
+          errorMessage: "Couldn't update article. Is the device online?");
     }
   }
 
@@ -92,19 +95,20 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
           await articleRepository.deleteArticle(articleId: event.articleId);
       yield ArticlesLoaded(articles: articles);
     } catch (_) {
-      yield ArticleError();
+      yield ArticleError(
+          errorMessage: "Couldn't delete article. Is the device online?");
     }
   }
 
   Stream<ArticleState> _mapBookmarkArticleEventToState(
       BookmarkArticleEvent event) async* {
-    yield ArticleLoading();
     try {
       final String message = await articleRepository.bookmarkArticle(
           articleId: event.articleId, username: event.username);
       yield ArticleSuccess(message: message);
     } catch (_) {
-      yield ArticleError();
+      yield ArticleError(
+          errorMessage: "Couldn't bookmark article. Is the device online?");
     }
   }
 }
