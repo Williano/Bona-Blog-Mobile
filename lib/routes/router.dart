@@ -35,6 +35,7 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
           routeSettings.arguments as Map<String, dynamic>;
 
       final Map<String, dynamic> categoryData = {
+        "categoryId": data["categoryId"],
         "categoryName": data["categoryName"],
         "categoryImageURL": data["categoryImageURL"],
       };
