@@ -22,6 +22,7 @@ class DisplayCategoriesWidget extends StatelessWidget {
           return GestureDetector(
               onTap: () {
                 Map<String, dynamic> data = {
+                  "categoryId": categoryIndex,
                   "categoryName": categories[categoryIndex].name,
                   "categoryImageURL": categories[categoryIndex].imageURL,
                 };

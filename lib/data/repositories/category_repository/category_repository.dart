@@ -1,3 +1,4 @@
+import 'package:bona_blog/models/article_models/article_model.dart';
 import 'package:bona_blog/models/category_models/category_model.dart';
 import 'package:meta/meta.dart';
 import 'package:bona_blog/services/remote_services/category_remote_services/category_remote_api_client.dart';
@@ -25,12 +26,12 @@ class CategoryRepository implements BonaBlogBaseRepository {
     }
   }
 
-  Future<dynamic> getCategoryArticles({int categoryId}) async {
+  Future<List<ArticleModel>> getCategoryArticles({int categoryId}) async {
     if (await connectionChecker.hasConnection) {
-      final categoryList = await categoryRemoteApiClient.getCategoryArticles(
-          categoryId: categoryId);
+      final categoryArticleList = await categoryRemoteApiClient
+          .getCategoryArticles(categoryId: categoryId);
 
-      return categoryList;
+      return categoryArticleList;
     } else {
       throw Exception('No internet connection');
     }

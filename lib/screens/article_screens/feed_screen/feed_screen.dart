@@ -68,7 +68,7 @@ class _FeedScreenState extends State<FeedScreen> {
                     categories: state.categories,
                   );
                 } else if (state is CategoryError) {
-                  return LoadingWidget();
+                  return Center(child: Text(state.errorMessage));
                 }
               }),
             ),
@@ -124,7 +124,7 @@ class _FeedScreenState extends State<FeedScreen> {
                         } else if (state is ArticleSuccess) {
                           return LoadingWidget();
                         } else if (state is ArticleError) {
-                          return LoadingWidget();
+                          return Center(child: Text(state.errorMessage));
                         }
                       },
                     )))

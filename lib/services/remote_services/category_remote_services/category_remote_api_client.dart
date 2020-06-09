@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:bona_blog/models/article_models/article_model.dart';
 import 'package:bona_blog/models/category_models/category_model.dart';
 import 'package:bona_blog/utils/dummy_data/article_dummy_data.dart';
 import 'package:bona_blog/utils/dummy_data/category_dummy_data.dart';
@@ -28,7 +29,7 @@ class CategoryApiClient {
     return dummyGetAllCategories();
   }
 
-  Future<dynamic> getCategoryArticles({int categoryId}) async {
+  Future<List<ArticleModel>> getCategoryArticles({int categoryId}) async {
     // final categoryArticlesUrl = "$baseUrl/$categoryId";
     // final http.Response apiResponse =
     //     await this.httpClient.get(categoryArticlesUrl, headers: headers);
@@ -38,6 +39,7 @@ class CategoryApiClient {
     // }
 
     // final articleJson = jsonDecode(apiResponse.body);
+    await Future.delayed(Duration(seconds: 5));
     return dummyGetAllArticles();
   }
 }
