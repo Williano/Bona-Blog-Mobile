@@ -28,6 +28,7 @@ class _CateoryArticlesListScreenState extends State<CateoryArticlesListScreen> {
 
   @override
   void initState() {
+    super.initState();
     final categoryBloc = BlocProvider.of<CategoryBloc>(context);
     categoryBloc
         .add(GetCategoryArticlesEvent(categoryId: widget.categoryIndex));
@@ -35,7 +36,6 @@ class _CateoryArticlesListScreenState extends State<CateoryArticlesListScreen> {
       "categoryName": widget.categoryName,
       "categoryImageURL": widget.categoryImageURL
     };
-    super.initState();
   }
 
   @override
@@ -57,7 +57,7 @@ class _CateoryArticlesListScreenState extends State<CateoryArticlesListScreen> {
         ],
         child: BlocBuilder<CategoryBloc, CategoryState>(
           builder: (context, state) {
-            if (state is CategoryEmpty) {
+            if (state is CategoryLoading) {
               return LoadingWidget();
             } else if (state is CategoryArticlesLoaded) {
               if (state.categoryArticles.isEmpty) {
@@ -70,6 +70,8 @@ class _CateoryArticlesListScreenState extends State<CateoryArticlesListScreen> {
               );
             } else if (state is CategoryError) {
               return Center(child: Text(state.errorMessage));
+            } else {
+              return LoadingWidget();
             }
           },
         ),
