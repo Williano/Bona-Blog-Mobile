@@ -20,8 +20,6 @@ An Open-Source blogging plaform like [Medium](https://medium.com/) and [Real Pyt
 
 ### iOS
 
-##### iPhones
-
  Feed Screen           |  Categories List Screen
  :-------------------------:|:-------------------------:
 ![Feed](https://user-images.githubusercontent.com/19711677/79617784-ed883880-80cd-11ea-95c0-15ce5d5939b0.png)|![Categories](https://user-images.githubusercontent.com/19711677/79617788-f11bbf80-80cd-11ea-9535-0109edf59f80.png)
@@ -34,7 +32,6 @@ An Open-Source blogging plaform like [Medium](https://medium.com/) and [Real Pyt
 
 ### Android
 
- ##### Android Phones
  Feed Screen            |  Categories List Screen
  :-------------------------:|:-------------------------:
 ![Feed](https://user-images.githubusercontent.com/19711677/79617949-55d71a00-80ce-11ea-9edc-10ef4689b4c6.PNG)|![Categories](https://user-images.githubusercontent.com/19711677/79617934-4eb00c00-80ce-11ea-9c97-ffaa84a6294b.PNG)
