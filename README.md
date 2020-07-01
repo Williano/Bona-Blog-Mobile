@@ -5,8 +5,8 @@ An iOS and Android Mobile App for the [Open-Source Bona Blogging Web App](https:
 * [General info](#general-info)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
-* [Setup](#setup)
 * [Features](#features)
+* [Setup](#setup)
 * [Status](#status)
 * [Inspiration](#inspiration)
 * [Contact](#contact)
@@ -48,6 +48,20 @@ Category ArticleModel List Screen  |  Error Screen
 * Dart
 * Flutter
 
+## Features
+* [Web App Version](https://github.com/Williano/Bona-Blog.git)
+* Authors List
+* Author Article List
+* Category List
+* Category Article List
+* Related Article
+* Comments
+* Article Minute Read
+* ArticleNumber of Words
+* Aricle Number of Views
+* Markdown Support
+* Clean Code
+
 
 ## Setup
 To run this app, you will need to follow these 3 steps:
@@ -81,25 +95,9 @@ To run this app, you will need to follow these 3 steps:
   $ flutter run
   ```
 
-## Features
-* [Web App Version](https://github.com/Williano/Bona-Blog.git)
-* Authors List
-* Author Article List
-* Category List
-* Category Article List
-* Related Article
-* Comments
-* Article Minute Read
-* ArticleNumber of Words
-* Aricle Number of Views
-* Markdown Support
-* Clean Code
-
-
 To-do list:
 * Authors List
 * Author Articles List
-* Category Article List
 * Related Article
 * Comments
 * Article Minute Read
