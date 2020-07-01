@@ -20,7 +20,7 @@ An Open-Source blogging plaform like [Medium](https://medium.com/) and [Real Pyt
 
 ### iOS
 
-##### Big iPhones
+##### iPhones
 
  Feed Screen           |  Categories List Screen
  :-------------------------:|:-------------------------:
@@ -29,47 +29,6 @@ An Open-Source blogging plaform like [Medium](https://medium.com/) and [Real Pyt
  Category ArticleModel List Screen            |  Error Screen
  :-------------------------:|:-------------------------:
 ![categoryArticleModels](https://user-images.githubusercontent.com/19711677/79617792-f416b000-80cd-11ea-9ebf-1ac28a85f207.png)|![notFound](https://user-images.githubusercontent.com/19711677/79617786-efea9280-80cd-11ea-8628-dd926999c611.png)
-
-
-##### Small iPhones
-
- Feed Screen           |  Categories List Screen
- :-------------------------:|:-------------------------:
-![FeedScreen_Small_Iphones](https://user-images.githubusercontent.com/19711677/78615562-8352d680-7837-11ea-9523-1d80c8f9d70f.png)|![categoryList](https://user-images.githubusercontent.com/19711677/78615560-81891300-7837-11ea-974f-2cdd74dc0e9e.png)
-
- Category ArticleModel List Screen            |  Error Screen
- :-------------------------:|:-------------------------:
-![categoryArticleModels](https://user-images.githubusercontent.com/19711677/78615558-8057e600-7837-11ea-898d-92d7daa798ea.png)|![notFoundScreen](https://user-images.githubusercontent.com/19711677/78615564-83eb6d00-7837-11ea-87bc-e1d7d07930c4.png)
-
-
-
-
-
-##### Big iPads
-
- Feed Screen           |  Categories List Screen
- :-------------------------:|:-------------------------:
-![Feed_iPadPro](https://user-images.githubusercontent.com/19711677/78615704-d9277e80-7837-11ea-9ebe-5f01c9c5f2b1.png)|![categoryList_iPadPro](https://user-images.githubusercontent.com/19711677/78615695-d4fb6100-7837-11ea-9388-4519b1355a6b.png)
-
- Category ArticleModel List Screen            |  Error Screen
- :-------------------------:|:-------------------------:
-![categoryArticleModels_iPadPro](https://user-images.githubusercontent.com/19711677/78615689-d2007080-7837-11ea-8291-24ae979b07fd.png)|![notFound_iPadPro](https://user-images.githubusercontent.com/19711677/78615705-daf14200-7837-11ea-8456-85ae5f58e90a.png)
-
-
-##### Small iPads
-
- Feed Screen           |  Categories List Screen
- :-------------------------:|:-------------------------:
-![FeedScreen_iPadAir2](https://user-images.githubusercontent.com/19711677/78615798-0a07b380-7838-11ea-9e5a-5030c0cc4fa3.png)|![categoryList_iPadAir2](https://user-images.githubusercontent.com/19711677/78615794-070cc300-7838-11ea-965f-715ca5515a1c.png)
-
- Category ArticleModel List Screen            |  Error Screen
- :-------------------------:|:-------------------------:
-![categoryArticleModels_iPadAir2](https://user-images.githubusercontent.com/19711677/78615791-04aa6900-7838-11ea-88f3-ea83c5336735.png)|![notFound_iPadAir2](https://user-images.githubusercontent.com/19711677/78615800-0bd17700-7838-11ea-96d3-7cfac890786f.png)
-
-
-
-
-
 
 
 
