@@ -47,6 +47,7 @@ Category ArticleModel List Screen  |  Error Screen
 ## Technologies
 * Dart
 * Flutter
+* BLoC 
 
 ## Features
 * [Web App Version](https://github.com/Williano/Bona-Blog.git)
@@ -57,9 +58,11 @@ Category ArticleModel List Screen  |  Error Screen
 * Related Article
 * Comments
 * Article Minute Read
-* ArticleNumber of Words
+* Article Number of Words
 * Aricle Number of Views
 * Markdown Support
+* WYSIWYG Editor
+* Dashboard for users
 * Clean Code
 
 
