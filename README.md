@@ -84,13 +84,13 @@ To run this app, you will need to follow these 3 steps:
 ## Features
 * [Web App Version](https://github.com/Williano/Bona-Blog.git)
 * Authors List
-* Author ArticleModels List
+* Author Article List
 * Category List
-* Category ArticleModels List
-* Related ArticleModels
+* Category Article List
+* Related Article
 * Comments
-* ArticleModel Minute Read
-* ArticleModel Number of Words
+* Article Minute Read
+* ArticleNumber of Words
 * Aricle Number of Views
 * Markdown Support
 * Clean Code
@@ -98,14 +98,14 @@ To run this app, you will need to follow these 3 steps:
 
 To-do list:
 * Authors List
-* Author ArticleModels List
-* Category ArticleModels List
-* Related ArticleModels
+* Author Articles List
+* Category Article List
+* Related Article
 * Comments
-* ArticleModel Minute Read
-* ArticleModel Number of Words
+* Article Minute Read
+* Article Number of Words
 * Aricle Number of Views
-* ArticleModel Detail
+* Article Detail
 * Dark Mode
 * Launch Screen
 
