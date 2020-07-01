@@ -34,7 +34,7 @@ An Open-Source blogging plaform like [Medium](https://medium.com/) and [Real Pyt
 
 ### Android
 
- ##### Big Android Phones
+ ##### Android Phones
  Feed Screen            |  Categories List Screen
  :-------------------------:|:-------------------------:
 ![Feed](https://user-images.githubusercontent.com/19711677/79617949-55d71a00-80ce-11ea-9edc-10ef4689b4c6.PNG)|![Categories](https://user-images.githubusercontent.com/19711677/79617934-4eb00c00-80ce-11ea-9c97-ffaa84a6294b.PNG)
@@ -43,36 +43,6 @@ Category ArticleModel List Screen  |  Error Screen
  :-------------------------:|:-------------------------:
 ![CategoryArticleModels](https://user-images.githubusercontent.com/19711677/79617947-5374c000-80ce-11ea-8c40-112112ae0d20.PNG)|![notFoud](https://user-images.githubusercontent.com/19711677/79617954-57a0dd80-80ce-11ea-9ac4-58a76174e7ec.PNG)
 
- ##### Small Android Phones
- Feed Screen            |  Categories List Screen
- :-------------------------:|:-------------------------:
-![FeedScreen](https://user-images.githubusercontent.com/19711677/78615976-89958280-7838-11ea-9f1f-d3c3e1345eca.png)|![categoriesScreen](https://user-images.githubusercontent.com/19711677/78615974-88fcec00-7838-11ea-89bb-3e973b45d032.png)
-
-Category ArticleModel List Screen  |  Error Screen
- :-------------------------:|:-------------------------:
-![categoriesArticleModelsScreen](https://user-images.githubusercontent.com/19711677/78615972-87cbbf00-7838-11ea-85a5-a13b6c073f39.png)|![errorscreen](https://user-images.githubusercontent.com/19711677/78615975-89958280-7838-11ea-8547-377b90566b77.png)
-
-
-
-
-
- ##### Big Android Tablets
- Feed Screen            |  Categories List Screen
- :-------------------------:|:-------------------------:
-![Feed](https://user-images.githubusercontent.com/19711677/78616276-6cad7f00-7839-11ea-89c9-c70605ace7db.png)|![categories](https://user-images.githubusercontent.com/19711677/78616267-67503480-7839-11ea-9f94-d9c20821673f.png)
-
-Category ArticleModel List Screen  |  Error Screen
- :-------------------------:|:-------------------------:
-![categoryArticleModels](https://user-images.githubusercontent.com/19711677/78616272-6ae3bb80-7839-11ea-9125-9fa3155ee37a.png)|![notfound](https://user-images.githubusercontent.com/19711677/78616278-6ddeac00-7839-11ea-9672-0f582e5d5c2c.png)
-
- ##### Small Android Tablets
- Feed Screen            |  Categories List Screen
- :-------------------------:|:-------------------------:
-![Feed](https://user-images.githubusercontent.com/19711677/78616399-bbf3af80-7839-11ea-8d6d-5d7cbca4bcc6.png)|![categories](https://user-images.githubusercontent.com/19711677/78616392-b72efb80-7839-11ea-9ff9-4c4f13defc05.png)
-
-Category ArticleModel List Screen  |  Error Screen
- :-------------------------:|:-------------------------:
-![categoryArticleModels](https://user-images.githubusercontent.com/19711677/78616397-bac28280-7839-11ea-8072-53accacfe533.png)|![notFouund](https://user-images.githubusercontent.com/19711677/78616401-be560980-7839-11ea-99fd-e43be3b646b2.png)
 
 ## Technologies
 * Dart
