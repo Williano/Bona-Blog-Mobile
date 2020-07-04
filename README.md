@@ -4,8 +4,8 @@ An iOS and Android Mobile App for the [Open-Source Bona Blogging Web App](https:
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
-* [Technologies](#technologies)
 * [Features](#features)
+* [Technologies](#technologies)
 * [Setup](#setup)
 * [Status](#status)
 * [Inspiration](#inspiration)
@@ -41,11 +41,6 @@ Category ArticleModel List Screen  |  Error Screen
 ![CategoryArticleModels](https://user-images.githubusercontent.com/19711677/79617947-5374c000-80ce-11ea-8c40-112112ae0d20.PNG)|![notFoud](https://user-images.githubusercontent.com/19711677/79617954-57a0dd80-80ce-11ea-9ac4-58a76174e7ec.PNG)
 
 
-## Technologies
-* Dart
-* Flutter
-* BLoC 
-
 ## Features
 * [Web App Version](https://github.com/Williano/Bona-Blog.git)
 * Authors List
@@ -61,6 +56,12 @@ Category ArticleModel List Screen  |  Error Screen
 * WYSIWYG Editor
 * Dashboard for users
 * Clean Code
+
+
+## Technologies
+* Dart
+* Flutter
+* BLoC 
 
 
 ## Setup
