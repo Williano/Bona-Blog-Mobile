@@ -102,7 +102,7 @@ To-do list:
 * Related Article
 * Comments
 * Article Minute Read
-* Article Number of Words
+* Article word count
 * Aricle Number of Views
 * Article Detail
 * Dark Mode
