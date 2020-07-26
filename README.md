@@ -43,7 +43,7 @@ Category ArticleModel List Screen  |  Error Screen
 
 ## Features
 * [Web App Version](https://github.com/Williano/Bona-Blog.git)
-* Authors List
+* Dashboard
 * Author Article List
 * Category List
 * Category Article List
