@@ -16,6 +16,7 @@ An iOS and Android Mobile App for the [Open-Source Bona Blog Web App](https://gi
 ## General info
 An Open-Source blogging plaform like [Medium](https://medium.com/) and [Real Python](https://realpython.com/) built with Dart and Flutter. It has a number of [features](#features) needed for a standard blogging platform.
 
+
 ## Screenshots
 
 ### iOS
