@@ -16,15 +16,15 @@ class FeedScreen extends StatefulWidget {
 
 class _FeedScreenState extends State<FeedScreen> {
   @override
-  void initState() {
-    final categoryBloc = BlocProvider.of<CategoryBloc>(context);
-    categoryBloc.add(GetCategoriesEvent());
+  // void initState() {
+  //   final categoryBloc = BlocProvider.of<CategoryBloc>(context);
+  //   categoryBloc.add(GetCategoriesEvent());
 
-    final articleBloc = BlocProvider.of<ArticleBloc>(context);
-    articleBloc.add(GetArticlesEvent());
+  //   final articleBloc = BlocProvider.of<ArticleBloc>(context);
+  //   articleBloc.add(GetArticlesEvent());
 
-    super.initState();
-  }
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -69,6 +69,8 @@ class _FeedScreenState extends State<FeedScreen> {
                   );
                 } else if (state is CategoryError) {
                   return Center(child: Text(state.errorMessage));
+                } else {
+                  return LoadingWidget();
                 }
               }),
             ),
@@ -125,6 +127,8 @@ class _FeedScreenState extends State<FeedScreen> {
                           return LoadingWidget();
                         } else if (state is ArticleError) {
                           return Center(child: Text(state.errorMessage));
+                        } else {
+                          return LoadingWidget();
                         }
                       },
                     )))
