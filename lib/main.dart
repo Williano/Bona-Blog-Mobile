@@ -35,10 +35,12 @@ class BonaBlog extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider<CategoryBloc>(
-          create: (context) => servicelocator<CategoryBloc>(),
+          create: (context) =>
+              servicelocator<CategoryBloc>()..add(GetCategoriesEvent()),
         ),
         BlocProvider<ArticleBloc>(
-          create: (context) => servicelocator<ArticleBloc>(),
+          create: (context) =>
+              servicelocator<ArticleBloc>()..add(GetArticlesEvent()),
         ),
       ],
       child: MaterialApp(
