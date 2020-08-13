@@ -38,6 +38,8 @@ class _CategoryListScreenState extends State<CategoryListScreen> {
             );
           } else if (state is CategoryError) {
             return LoadingWidget();
+          } else {
+            return LoadingWidget();
           }
         },
       ),
