@@ -27,8 +27,9 @@ class _CateoryArticlesListScreenState extends State<CateoryArticlesListScreen> {
   Map<String, dynamic> _categoryData;
 
   @override
-  void initState() {
-    super.initState();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // Immediately trigger the event
     final categoryBloc = BlocProvider.of<CategoryBloc>(context);
     categoryBloc
         .add(GetCategoryArticlesEvent(categoryId: widget.categoryIndex));
