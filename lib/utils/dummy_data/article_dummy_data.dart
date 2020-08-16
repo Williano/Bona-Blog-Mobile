@@ -1,7 +1,7 @@
-import 'package:bona_blog/models/article_models/article_model.dart';
+import 'package:bona_blog/features/article/data/model/article_model.dart';
 
-List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
-      ArticleModel(
+List<Article> dummyGetAllArticles() => <Article>[
+      Article(
           articleId: 1,
           author: "Williano",
           title: "Sports is the Best1 Sports is the Best1 Sports is the Best1",
@@ -11,7 +11,7 @@ List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
           numberOfViews: 5000,
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
-      ArticleModel(
+      Article(
           articleId: 2,
           author: "Williano Williano",
           title:
@@ -22,7 +22,7 @@ List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
           numberOfViews: 5000,
           readTime: 200,
           datePublishedOn: "May 15, 2019"),
-      ArticleModel(
+      Article(
           articleId: 3,
           author: "William Kwabla",
           title: "Art is the Best1",
@@ -32,7 +32,7 @@ List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
           numberOfViews: 5000,
           readTime: 200,
           datePublishedOn: "Jan 15, 2019"),
-      ArticleModel(
+      Article(
           articleId: 4,
           author: "Bill",
           title: "Food is the Best1",
@@ -42,7 +42,7 @@ List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
           numberOfViews: 5000,
           readTime: 200,
           datePublishedOn: "Feb 15, 2020"),
-      ArticleModel(
+      Article(
           articleId: 5,
           author: "Seema",
           title: "Design is the Best1",
@@ -52,7 +52,7 @@ List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
           numberOfViews: 5000,
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
-      ArticleModel(
+      Article(
           articleId: 6,
           author: "Khalil",
           title: "Education is the Best1",
@@ -62,7 +62,7 @@ List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
           numberOfViews: 5000,
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
-      ArticleModel(
+      Article(
           articleId: 7,
           author: "Dr. Tansel Halic",
           title: "Entertainment is the Best1",
@@ -72,7 +72,7 @@ List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
           numberOfViews: 5000,
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
-      ArticleModel(
+      Article(
           articleId: 8,
           author: "Adiza Rasheed",
           title: "Programming is the Best1",
@@ -82,7 +82,7 @@ List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
           numberOfViews: 5000,
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
-      ArticleModel(
+      Article(
           articleId: 9,
           author: "Kwabena Yeboah",
           title: "Sports is the Best1",
@@ -92,7 +92,7 @@ List<ArticleModel> dummyGetAllArticles() => <ArticleModel>[
           numberOfViews: 5000,
           readTime: 200,
           datePublishedOn: "April 15, 2019"),
-      ArticleModel(
+      Article(
           articleId: 10,
           author: "Oliver Boamah",
           title: "Bugs is the Best1",
