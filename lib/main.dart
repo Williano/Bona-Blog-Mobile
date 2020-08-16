@@ -1,6 +1,6 @@
 import 'package:bona_blog/features/article/bloc/article_bloc.dart';
-import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
-import 'package:bona_blog/shared/utils/bloc/simple_bloc_delegate.dart';
+import 'package:bona_blog/features/category/bloc/category_bloc.dart';
+import 'package:bona_blog/shared/bloc/simple_bloc_delegate.dart';
 import 'package:bona_blog/injection_container.dart';
 import 'package:bona_blog/routes/router.dart';
 import 'package:bona_blog/features/bottom_navigation_screen.dart';

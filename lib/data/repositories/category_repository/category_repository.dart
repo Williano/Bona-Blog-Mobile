@@ -1,10 +1,9 @@
 import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:bona_blog/models/category_models/category_model.dart';
+import 'package:bona_blog/shared/bloc/base_repository.dart';
 import 'package:meta/meta.dart';
 import 'package:bona_blog/services/remote_services/category_remote_services/category_remote_api_client.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
-
-import '../base_repository.dart';
 
 class CategoryRepository implements BonaBlogBaseRepository {
   final DataConnectionChecker connectionChecker;
