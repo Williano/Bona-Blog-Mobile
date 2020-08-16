@@ -6,7 +6,7 @@ import 'package:bona_blog/shared/utils/dummy_data/article_dummy_data.dart';
 import 'package:bona_blog/shared/utils/dummy_data/category_dummy_data.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
-import '../../../../services/remote_services/config.dart';
+import '../../../../shared/utils/config.dart';
 
 class CategoryApiClient {
   static const baseUrl = remoteApiBaseURL;

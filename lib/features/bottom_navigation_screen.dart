@@ -1,5 +1,5 @@
 import 'package:bona_blog/features/article/ui/feed_screen/feed_screen.dart';
-import 'package:bona_blog/screens/category_screens/category_list_screen/category_list_screen.dart';
+import 'package:bona_blog/features/category/ui/category_list_screen/category_list_screen.dart';
 import 'package:bona_blog/features/undefined_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

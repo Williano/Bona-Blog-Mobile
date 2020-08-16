@@ -1,6 +1,6 @@
 import 'package:bona_blog/features/article/ui/feed_screen/feed_screen.dart';
-import 'package:bona_blog/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
-import 'package:bona_blog/screens/category_screens/category_list_screen/category_list_screen.dart';
+import 'package:bona_blog/features/category/ui/category_articles_list_screen/category_articles_list_screen.dart';
+import 'package:bona_blog/features/category/ui/category_list_screen/category_list_screen.dart';
 import 'package:bona_blog/features/bottom_navigation_screen.dart';
 import 'package:bona_blog/features/undefined_screen.dart';
 import 'package:bona_blog/shared/utils/routes/route_constants_utils.dart';
