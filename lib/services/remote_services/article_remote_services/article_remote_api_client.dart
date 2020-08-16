@@ -1,9 +1,9 @@
 import 'dart:convert';
+import 'package:bona_blog/shared/utils/dummy_data/article_dummy_data.dart';
 import 'package:meta/meta.dart';
 
 import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:bona_blog/services/remote_services/config.dart';
-import 'package:bona_blog/utils/dummy_data/article_dummy_data.dart';
 import 'package:http/http.dart' as http;
 
 class ArticleApiClient {

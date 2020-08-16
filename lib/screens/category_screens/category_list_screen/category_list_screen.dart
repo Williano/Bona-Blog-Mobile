@@ -1,8 +1,8 @@
 import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
 import 'package:bona_blog/screens/category_screens/category_list_screen/category_card_widget.dart';
+import 'package:bona_blog/shared/utils/routes/route_constants_utils.dart';
 import 'package:bona_blog/shared/widgets/loading_widget/loading_widget.dart';
 import 'package:bona_blog/shared/widgets/sliver_widgets/static_sliver_app_widget.dart';
-import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

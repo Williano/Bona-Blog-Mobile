@@ -1,6 +1,6 @@
 import 'package:bona_blog/models/category_models/category_model.dart';
 import 'package:bona_blog/screens/article_screens/feed_screen/feed_category_card_widget.dart';
-import 'package:bona_blog/utils/routes/route_constants_utils.dart';
+import 'package:bona_blog/shared/utils/routes/route_constants_utils.dart';
 import 'package:flutter/material.dart';
 
 class DisplayCategoriesWidget extends StatelessWidget {

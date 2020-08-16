@@ -1,4 +1,4 @@
-import 'package:bona_blog/utils/routes/route_constants_utils.dart';
+import 'package:bona_blog/shared/utils/routes/route_constants_utils.dart';
 import 'package:flutter/material.dart';
 
 class UndefinedScreen extends StatelessWidget {

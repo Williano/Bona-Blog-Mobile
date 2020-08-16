@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:bona_blog/models/category_models/category_model.dart';
-import 'package:bona_blog/utils/dummy_data/article_dummy_data.dart';
-import 'package:bona_blog/utils/dummy_data/category_dummy_data.dart';
+import 'package:bona_blog/shared/utils/dummy_data/article_dummy_data.dart';
+import 'package:bona_blog/shared/utils/dummy_data/category_dummy_data.dart';
 import 'package:http/http.dart' as http;
 import 'package:meta/meta.dart';
 import '../config.dart';

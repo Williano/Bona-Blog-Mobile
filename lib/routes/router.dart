@@ -3,7 +3,7 @@ import 'package:bona_blog/screens/category_screens/category_articles_list_screen
 import 'package:bona_blog/screens/category_screens/category_list_screen/category_list_screen.dart';
 import 'package:bona_blog/screens/bottom_navigation_screen.dart';
 import 'package:bona_blog/screens/undefined_screen.dart';
-import 'package:bona_blog/utils/routes/route_constants_utils.dart';
+import 'package:bona_blog/shared/utils/routes/route_constants_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
