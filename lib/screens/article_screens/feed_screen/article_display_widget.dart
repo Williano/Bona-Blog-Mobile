@@ -1,9 +1,9 @@
-import 'package:bona_blog/models/article_models/article_model.dart';
+import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:bona_blog/screens/article_screens/feed_screen/article_card_widget.dart';
 import 'package:flutter/material.dart';
 
 class DisplayArticlesWidget extends StatelessWidget {
-  final List<ArticleModel> articles;
+  final List<Article> articles;
 
   const DisplayArticlesWidget({
     Key key,

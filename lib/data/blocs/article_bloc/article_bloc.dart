@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:bona_blog/data/repositories/article_repository/article_repository.dart';
-import 'package:bona_blog/models/article_models/article_model.dart';
+import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:meta/meta.dart';
 
 import 'package:bloc/bloc.dart';
@@ -39,8 +39,7 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
   Stream<ArticleState> _mapGetArticlesEventToState(
       GetArticlesEvent event) async* {
     try {
-      final List<ArticleModel> articles =
-          await articleRepository.getAllArticles();
+      final List<Article> articles = await articleRepository.getAllArticles();
       yield ArticlesLoaded(articles: articles);
     } catch (_) {
       yield ArticleError(
@@ -52,7 +51,7 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
       GetArticleDetailEvent event) async* {
     yield ArticleLoading();
     try {
-      final ArticleModel article =
+      final Article article =
           await articleRepository.getArticleDetail(articleId: event.articleId);
       yield ArticleLoaded(article: article);
     } catch (_) {
@@ -65,7 +64,7 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
       CreateArticleEvent event) async* {
     yield ArticleLoading();
     try {
-      final ArticleModel article =
+      final Article article =
           await articleRepository.createArticle(articleData: event.articleData);
       yield ArticleLoaded(article: article);
     } catch (_) {
@@ -78,7 +77,7 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
       UpdateArticleEvent event) async* {
     yield ArticleLoading();
     try {
-      final ArticleModel article = await articleRepository.updateArticle(
+      final Article article = await articleRepository.updateArticle(
           articleId: event.articleId, newArticleData: event.newArticleData);
       yield ArticleLoaded(article: article);
     } catch (_) {
@@ -91,7 +90,7 @@ class ArticleBloc extends Bloc<ArticleEvent, ArticleState> {
       DeleteArticleEvent event) async* {
     yield ArticleLoading();
     try {
-      final List<ArticleModel> articles =
+      final List<Article> articles =
           await articleRepository.deleteArticle(articleId: event.articleId);
       yield ArticlesLoaded(articles: articles);
     } catch (_) {

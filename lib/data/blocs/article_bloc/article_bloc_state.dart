@@ -15,7 +15,7 @@ class ArticleLoading extends ArticleState {
 }
 
 class ArticlesLoaded extends ArticleState {
-  final List<ArticleModel> articles;
+  final List<Article> articles;
 
   const ArticlesLoaded({@required this.articles});
 
@@ -24,7 +24,7 @@ class ArticlesLoaded extends ArticleState {
 }
 
 class ArticleLoaded extends ArticleState {
-  final ArticleModel article;
+  final Article article;
 
   const ArticleLoaded({@required this.article});
 

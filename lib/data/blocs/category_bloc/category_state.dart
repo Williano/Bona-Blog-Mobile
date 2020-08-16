@@ -23,7 +23,7 @@ class CategoriesLoaded extends CategoryState {
 }
 
 class CategoryArticlesLoaded extends CategoryState {
-  final List<ArticleModel> categoryArticles;
+  final List<Article> categoryArticles;
 
   const CategoryArticlesLoaded({@required this.categoryArticles});
 

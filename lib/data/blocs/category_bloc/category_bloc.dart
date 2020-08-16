@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:bona_blog/data/repositories/category_repository/category_repository.dart';
-import 'package:bona_blog/models/article_models/article_model.dart';
+import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:bona_blog/models/category_models/category_model.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';

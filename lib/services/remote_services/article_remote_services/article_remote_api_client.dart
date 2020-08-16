@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:meta/meta.dart';
 
-import 'package:bona_blog/models/article_models/article_model.dart';
+import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:bona_blog/services/remote_services/config.dart';
 import 'package:bona_blog/utils/dummy_data/article_dummy_data.dart';
 import 'package:http/http.dart' as http;
@@ -12,7 +12,7 @@ class ArticleApiClient {
 
   const ArticleApiClient({@required this.httpClient});
 
-  Future<ArticleModel> createArticle({Map articleData}) async {
+  Future<Article> createArticle({Map articleData}) async {
     final createArticleUrl = "$baseUrl/";
     final http.Response apiResponse = await this
         .httpClient
@@ -26,7 +26,7 @@ class ArticleApiClient {
     return null;
   }
 
-  Future<List<ArticleModel>> getAllArticles() async {
+  Future<List<Article>> getAllArticles() async {
     // final createArticleUrl = "$baseUrl/";
     // final http.Response apiResponse =
     //     await this.httpClient.get(createArticleUrl, headers: headers);
@@ -41,7 +41,7 @@ class ArticleApiClient {
     return dummyGetAllArticles();
   }
 
-  Future<ArticleModel> getArticleDetail({int articleId}) async {
+  Future<Article> getArticleDetail({int articleId}) async {
     final createArticleUrl = "$baseUrl/$articleId";
     final http.Response apiResponse =
         await this.httpClient.get(createArticleUrl, headers: headers);
@@ -54,7 +54,7 @@ class ArticleApiClient {
     return null;
   }
 
-  Future<List<ArticleModel>> deleteArticle({int articleId}) async {
+  Future<List<Article>> deleteArticle({int articleId}) async {
     final createArticleUrl = "$baseUrl/$articleId";
     final http.Response apiResponse =
         await this.httpClient.post(createArticleUrl, headers: headers);
@@ -67,8 +67,7 @@ class ArticleApiClient {
     return null;
   }
 
-  Future<ArticleModel> updateArticle(
-      {int articleId, Map newArticleData}) async {
+  Future<Article> updateArticle({int articleId, Map newArticleData}) async {
     final createArticleUrl = "$baseUrl/$articleId";
     final http.Response apiResponse = await this
         .httpClient

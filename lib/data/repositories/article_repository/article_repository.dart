@@ -1,4 +1,4 @@
-import 'package:bona_blog/models/article_models/article_model.dart';
+import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:bona_blog/services/remote_services/article_remote_services/article_remote_api_client.dart';
 import 'package:meta/meta.dart';
 import 'package:bona_blog/data/repositories/base_repository.dart';
@@ -14,7 +14,7 @@ class ArticleRepository implements BonaBlogBaseRepository {
       @required this.articleRemoteApiClient,
       this.articleLocalApiClient});
 
-  Future<ArticleModel> createArticle({Map articleData}) async {
+  Future<Article> createArticle({Map articleData}) async {
     if (await connectionChecker.hasConnection) {
       final newArticle =
           await articleRemoteApiClient.createArticle(articleData: articleData);
@@ -25,7 +25,7 @@ class ArticleRepository implements BonaBlogBaseRepository {
     }
   }
 
-  Future<List<ArticleModel>> getAllArticles() async {
+  Future<List<Article>> getAllArticles() async {
     if (await connectionChecker.hasConnection) {
       final articleList = await articleRemoteApiClient.getAllArticles();
       return articleList;
@@ -34,7 +34,7 @@ class ArticleRepository implements BonaBlogBaseRepository {
     }
   }
 
-  Future<ArticleModel> getArticleDetail({int articleId}) async {
+  Future<Article> getArticleDetail({int articleId}) async {
     if (await connectionChecker.hasConnection) {
       final articleDetail =
           await articleRemoteApiClient.getArticleDetail(articleId: articleId);
@@ -45,7 +45,7 @@ class ArticleRepository implements BonaBlogBaseRepository {
     }
   }
 
-  Future<List<ArticleModel>> deleteArticle({int articleId}) async {
+  Future<List<Article>> deleteArticle({int articleId}) async {
     if (await connectionChecker.hasConnection) {
       final articleList =
           await articleRemoteApiClient.deleteArticle(articleId: articleId);
@@ -56,8 +56,7 @@ class ArticleRepository implements BonaBlogBaseRepository {
     }
   }
 
-  Future<ArticleModel> updateArticle(
-      {int articleId, Map newArticleData}) async {
+  Future<Article> updateArticle({int articleId, Map newArticleData}) async {
     if (await connectionChecker.hasConnection) {
       final articleDetail = await articleRemoteApiClient.updateArticle(
           articleId: articleId, newArticleData: newArticleData);
