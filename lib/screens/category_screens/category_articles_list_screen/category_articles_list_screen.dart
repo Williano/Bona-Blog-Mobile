@@ -1,8 +1,8 @@
 import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
-import 'package:bona_blog/models/article_models/article_model.dart';
-import 'package:bona_blog/widgets/card_widgets/article_card_widget.dart';
-import 'package:bona_blog/widgets/loading_widget/loading_widget.dart';
-import 'package:bona_blog/widgets/sliver_widgets/dynamic_sliver_app_bar_widget.dart';
+import 'package:bona_blog/features/article/data/model/article_model.dart';
+import 'package:bona_blog/shared/widgets/card_widgets/article_card_widget.dart';
+import 'package:bona_blog/shared/widgets/loading_widget/loading_widget.dart';
+import 'package:bona_blog/shared/widgets/sliver_widgets/dynamic_sliver_app_bar_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -83,7 +83,7 @@ class _CateoryArticlesListScreenState extends State<CateoryArticlesListScreen> {
 
 class DisplayCategoryArticlesWidget extends StatelessWidget {
   final Map categoryData;
-  final List<ArticleModel> articles;
+  final List<Article> articles;
   const DisplayCategoryArticlesWidget({
     Key key,
     @required this.categoryData,

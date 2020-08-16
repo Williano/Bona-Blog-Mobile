@@ -1,8 +1,8 @@
 import 'package:bona_blog/data/blocs/article_bloc/article_bloc.dart';
 import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
 import 'package:bona_blog/screens/article_screens/feed_screen/article_display_widget.dart';
-import 'package:bona_blog/widgets/custom_title_widget.dart';
-import 'package:bona_blog/widgets/loading_widget/loading_widget.dart';
+import 'package:bona_blog/shared/widgets/custom_title_widget.dart';
+import 'package:bona_blog/shared/widgets/loading_widget/loading_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

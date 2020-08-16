@@ -1,4 +1,4 @@
-import 'package:bona_blog/widgets/sliver_widgets/dynamic_flexible_space_bar_widget.dart';
+import 'package:bona_blog/shared/widgets/sliver_widgets/dynamic_flexible_space_bar_widget.dart';
 import 'package:flutter/material.dart';
 
 class DynamicSliverAppBar extends StatefulWidget {
