@@ -5,14 +5,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key key}) : super(key: key);
+class BottomNavigationScreen extends StatefulWidget {
+  const BottomNavigationScreen({Key key}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _BottomNavigationScreenState createState() => _BottomNavigationScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _currentTabIndex = 2;
 
   List<BottomNavigationBarItem> _bottomNavigationBarItems = [

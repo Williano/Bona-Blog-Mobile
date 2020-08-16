@@ -3,7 +3,7 @@ import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
 import 'package:bona_blog/data/blocs/simple_bloc_delegate.dart';
 import 'package:bona_blog/injection_container.dart';
 import 'package:bona_blog/routes/router.dart';
-import 'package:bona_blog/screens/home_screen.dart';
+import 'package:bona_blog/screens/bottom_navigation_screen.dart';
 import 'package:bona_blog/utils/routes/route_constants_utils.dart';
 import 'injection_container.dart' as dependencyInjection;
 // import 'package:device_preview/device_preview.dart';
@@ -73,7 +73,7 @@ class BonaBlog extends StatelessWidget {
           ),
           //backgroundColor: Color(0xFFEDF3F3),
         ),
-        home: HomeScreen(),
+        home: BottomNavigationScreen(),
       ),
     );
   }
