@@ -1,5 +1,5 @@
-import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
 import 'package:bona_blog/features/article/data/model/article_model.dart';
+import 'package:bona_blog/features/category/bloc/category_bloc.dart';
 import 'package:bona_blog/shared/widgets/card_widgets/article_card_widget.dart';
 import 'package:bona_blog/shared/widgets/loading_widget/loading_widget.dart';
 import 'package:bona_blog/shared/widgets/sliver_widgets/dynamic_sliver_app_bar_widget.dart';

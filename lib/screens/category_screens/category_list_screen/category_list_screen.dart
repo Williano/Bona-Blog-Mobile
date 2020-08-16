@@ -1,4 +1,4 @@
-import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
+import 'package:bona_blog/features/category/bloc/category_bloc.dart';
 import 'package:bona_blog/screens/category_screens/category_list_screen/category_card_widget.dart';
 import 'package:bona_blog/shared/utils/routes/route_constants_utils.dart';
 import 'package:bona_blog/shared/widgets/loading_widget/loading_widget.dart';
