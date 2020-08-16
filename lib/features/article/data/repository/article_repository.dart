@@ -1,5 +1,5 @@
 import 'package:bona_blog/features/article/data/model/article_model.dart';
-import 'package:bona_blog/services/remote_services/article_remote_services/article_remote_api_client.dart';
+import 'package:bona_blog/features/article/data/service/article_remote_api_client.dart';
 import 'package:meta/meta.dart';
 import 'package:bona_blog/data/repositories/base_repository.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';

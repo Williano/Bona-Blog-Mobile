@@ -1,4 +1,4 @@
-import 'package:bona_blog/data/blocs/article_bloc/article_bloc.dart';
+import 'package:bona_blog/features/article/bloc/article_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';

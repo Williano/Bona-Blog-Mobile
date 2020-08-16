@@ -1,9 +1,9 @@
-import 'package:bona_blog/data/blocs/article_bloc/article_bloc.dart';
+import 'package:bona_blog/features/article/bloc/article_bloc.dart';
 import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
-import 'package:bona_blog/data/blocs/simple_bloc_delegate.dart';
+import 'package:bona_blog/shared/utils/bloc/simple_bloc_delegate.dart';
 import 'package:bona_blog/injection_container.dart';
 import 'package:bona_blog/routes/router.dart';
-import 'package:bona_blog/screens/bottom_navigation_screen.dart';
+import 'package:bona_blog/features/bottom_navigation_screen.dart';
 import 'package:bona_blog/shared/utils/routes/route_constants_utils.dart';
 import 'injection_container.dart' as dependencyInjection;
 // import 'package:device_preview/device_preview.dart';

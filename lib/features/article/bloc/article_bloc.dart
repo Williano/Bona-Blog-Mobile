@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:bona_blog/data/repositories/article_repository/article_repository.dart';
+import 'package:bona_blog/features/article/data/repository/article_repository.dart';
 import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:meta/meta.dart';
 
