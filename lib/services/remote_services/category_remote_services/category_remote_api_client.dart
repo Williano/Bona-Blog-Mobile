@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:bona_blog/features/article/data/model/article_model.dart';
-import 'package:bona_blog/models/category_models/category_model.dart';
+import 'package:bona_blog/features/category/data/model/category_model.dart';
 import 'package:bona_blog/shared/utils/dummy_data/article_dummy_data.dart';
 import 'package:bona_blog/shared/utils/dummy_data/category_dummy_data.dart';
 import 'package:http/http.dart' as http;
@@ -14,7 +14,7 @@ class CategoryApiClient {
 
   const CategoryApiClient({@required this.httpClient});
 
-  Future<List<ArticleCategoryModel>> getAllCategories() async {
+  Future<List<ArticleCategory>> getAllCategories() async {
     // final getAllcategoriesUrl = "$baseUrl/";
     // final http.Response apiResponse =
     //     await this.httpClient.get(getAllcategoriesUrl, headers: headers);

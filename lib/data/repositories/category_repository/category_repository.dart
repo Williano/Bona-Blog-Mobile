@@ -1,5 +1,5 @@
 import 'package:bona_blog/features/article/data/model/article_model.dart';
-import 'package:bona_blog/models/category_models/category_model.dart';
+import 'package:bona_blog/features/category/data/model/category_model.dart';
 import 'package:bona_blog/shared/bloc/base_repository.dart';
 import 'package:meta/meta.dart';
 import 'package:bona_blog/services/remote_services/category_remote_services/category_remote_api_client.dart';
@@ -15,7 +15,7 @@ class CategoryRepository implements BonaBlogBaseRepository {
       @required this.categoryRemoteApiClient,
       this.articleLocalApiClient});
 
-  Future<List<ArticleCategoryModel>> getAllCategories() async {
+  Future<List<ArticleCategory>> getAllCategories() async {
     if (await connectionChecker.hasConnection) {
       final categoryList = await categoryRemoteApiClient.getAllCategories();
 

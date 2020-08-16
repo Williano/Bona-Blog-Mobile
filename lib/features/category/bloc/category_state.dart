@@ -15,7 +15,7 @@ class CategoryLoading extends CategoryState {
 }
 
 class CategoriesLoaded extends CategoryState {
-  final List<ArticleCategoryModel> categories;
+  final List<ArticleCategory> categories;
 
   const CategoriesLoaded({@required this.categories});
   @override

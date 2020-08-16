@@ -1,10 +1,10 @@
 import 'package:bona_blog/features/article/ui/feed_screen/feed_category_card_widget.dart';
-import 'package:bona_blog/models/category_models/category_model.dart';
+import 'package:bona_blog/features/category/data/model/category_model.dart';
 import 'package:bona_blog/shared/utils/routes/route_constants_utils.dart';
 import 'package:flutter/material.dart';
 
 class DisplayCategoriesWidget extends StatelessWidget {
-  final List<ArticleCategoryModel> categories;
+  final List<ArticleCategory> categories;
 
   const DisplayCategoriesWidget({
     Key key,

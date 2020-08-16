@@ -1,67 +1,67 @@
-import 'package:bona_blog/models/category_models/category_model.dart';
+import 'package:bona_blog/features/category/data/model/category_model.dart';
 
-List<ArticleCategoryModel> dummyGetAllCategories() => [
-      ArticleCategoryModel(
+List<ArticleCategory> dummyGetAllCategories() => [
+      ArticleCategory(
         name: "Sports",
         imageURL: "assets/images/SPORTS.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Art",
         imageURL: "assets/images/art.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Politics",
         imageURL: "assets/images/politics.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Entertainment",
         imageURL: "assets/images/Entertainment.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Programming",
         imageURL: "assets/images/programming.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Food",
         imageURL: "assets/images/food.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Software Engineering ",
         imageURL: "assets/images/se.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Design",
         imageURL: "assets/images/design.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Sports",
         imageURL: "assets/images/SPORTS.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Art",
         imageURL: "assets/images/art.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Politics",
         imageURL: "assets/images/politics.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Entertainment",
         imageURL: "assets/images/Entertainment.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Programming",
         imageURL: "assets/images/programming.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Food",
         imageURL: "assets/images/food.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Software Engineering",
         imageURL: "assets/images/se.jpg",
       ),
-      ArticleCategoryModel(
+      ArticleCategory(
         name: "Design",
         imageURL: "assets/images/design.jpg",
       ),

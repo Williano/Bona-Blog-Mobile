@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:bona_blog/data/repositories/category_repository/category_repository.dart';
 import 'package:bona_blog/features/article/data/model/article_model.dart';
-import 'package:bona_blog/models/category_models/category_model.dart';
+import 'package:bona_blog/features/category/data/model/category_model.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 
@@ -32,7 +32,7 @@ class CategoryBloc extends Bloc<CategoryEvent, CategoryState> {
   Stream<CategoryState> _mapGetCategoriesEventToState(
       GetCategoriesEvent event) async* {
     try {
-      final List<ArticleCategoryModel> categories =
+      final List<ArticleCategory> categories =
           await categoryRepository.getAllCategories();
       yield CategoriesLoaded(categories: categories);
     } catch (_) {

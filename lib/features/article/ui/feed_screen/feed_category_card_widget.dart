@@ -1,4 +1,4 @@
-import 'package:bona_blog/models/category_models/category_model.dart';
+import 'package:bona_blog/features/category/data/model/category_model.dart';
 import 'package:flutter/material.dart';
 
 class FeedCategoryCard extends StatelessWidget {
@@ -8,7 +8,7 @@ class FeedCategoryCard extends StatelessWidget {
     @required this.categoryIndex,
   }) : super(key: key);
 
-  final List<ArticleCategoryModel> categories;
+  final List<ArticleCategory> categories;
   final int categoryIndex;
 
   @override
