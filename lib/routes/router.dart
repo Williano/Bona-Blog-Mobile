@@ -1,9 +1,9 @@
-import 'package:bona_blog/screens/article_screens/feed_screen/feed_screen.dart';
-import 'package:bona_blog/screens/category_screens/category_articles_list_screen/category_articles_list_screen.dart';
-import 'package:bona_blog/screens/category_screens/category_list_screen/category_list_screen.dart';
-import 'package:bona_blog/screens/home_screen.dart';
-import 'package:bona_blog/screens/undefined_screen.dart';
-import 'package:bona_blog/utils/routes/route_constants_utils.dart';
+import 'package:bona_blog/features/article/ui/feed_screen/feed_screen.dart';
+import 'package:bona_blog/features/category/ui/category_articles_list_screen/category_articles_list_screen.dart';
+import 'package:bona_blog/features/category/ui/category_list_screen/category_list_screen.dart';
+import 'package:bona_blog/features/bottom_navigation_screen.dart';
+import 'package:bona_blog/features/undefined_screen.dart';
+import 'package:bona_blog/shared/utils/routes/route_constants_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +11,7 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
     case HomeScreenRoute:
       return CupertinoPageRoute(
-          builder: (BuildContext context) => HomeScreen());
+          builder: (BuildContext context) => BottomNavigationScreen());
       break;
 
     ///
@@ -35,6 +35,7 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
           routeSettings.arguments as Map<String, dynamic>;
 
       final Map<String, dynamic> categoryData = {
+        "categoryId": data["categoryId"],
         "categoryName": data["categoryName"],
         "categoryImageURL": data["categoryImageURL"],
       };

@@ -1,9 +1,9 @@
-import 'package:bona_blog/data/blocs/article_bloc/article_bloc.dart';
-import 'package:bona_blog/data/blocs/category_bloc/category_bloc.dart';
-import 'package:bona_blog/data/repositories/article_repository/article_repository.dart';
-import 'package:bona_blog/data/repositories/category_repository/category_repository.dart';
-import 'package:bona_blog/services/remote_services/article_remote_services/article_remote_api_client.dart';
-import 'package:bona_blog/services/remote_services/category_remote_services/category_remote_api_client.dart';
+import 'package:bona_blog/features/article/bloc/article_bloc.dart';
+import 'package:bona_blog/features/article/data/repository/article_repository.dart';
+import 'package:bona_blog/features/category/data/repository/category_repository.dart';
+import 'package:bona_blog/features/article/data/service/article_service.dart';
+import 'package:bona_blog/features/category/bloc/category_bloc.dart';
+import 'package:bona_blog/features/category/data/services/category_remote_api_client.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:get_it/get_it.dart';
 import 'package:http/http.dart' as http;
