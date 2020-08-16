@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:bona_blog/data/repositories/category_repository/category_repository.dart';
+import 'package:bona_blog/features/category/data/repository/category_repository.dart';
 import 'package:bona_blog/features/article/data/model/article_model.dart';
 import 'package:bona_blog/features/category/data/model/category_model.dart';
 import 'package:equatable/equatable.dart';
