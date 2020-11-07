@@ -7,6 +7,7 @@ An iOS and Android Mobile App for the [Open-Source Bona Blog Web App](https://gi
 [![GitHub issues](https://img.shields.io/github/issues/Williano/Bona-Blog-Mobile?style=for-the-badge)](https://img.shields.io/github/issues/Williano/Bona-Blog-Mobile?style=for-the-badge)
 
 
+
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
