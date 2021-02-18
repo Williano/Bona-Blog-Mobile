@@ -15,6 +15,7 @@ dependencies:
   cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.8.1
 
+  get:
   # Service locator
   get_it: ^3.1.0
   # Bloc for state management
