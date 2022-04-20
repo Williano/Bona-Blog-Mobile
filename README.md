@@ -71,7 +71,7 @@ Category ArticleModel List Screen  |  Error Screen
 * Dart
 * Flutter
 * BLoC 
-
+* Get
 
 ## Setup
 To run this app, you will need to follow these 3 steps:
